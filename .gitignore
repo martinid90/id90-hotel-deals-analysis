@@ -1,0 +1,44 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv/
+
+# Data files (too large for GitHub - see README for download instructions)
+data/historicals_*.csv
+data/datos_historicos_*.csv
+data/price_historicals/*.csv
+outputs/
+
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Credenciales — nunca subir
+.env
+
+# Deprecated files
+app_old.py
+06_mock_historica_NY_2.ipynb
+
+# Residual local files
+README.md.backup
+Test.ipynb

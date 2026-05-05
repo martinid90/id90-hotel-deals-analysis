@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.pyo
+.git/
+.gitignore
+.venv/
+venv/
+*.ipynb
+.ipynb_checkpoints/
+data/price_historicals/*.csv
+outputs/*.csv
+README.md
+06_mock_historica_NY_2.ipynb
