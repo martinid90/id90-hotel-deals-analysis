@@ -1,29 +1,222 @@
-# Deals Analysis — Sistema de Detección de Ofertas Hoteleras
+# Hotel Deals Analysis — Sistema de Detección de Ofertas Hoteleras
 
 **Diplomatura en Ciencia de Datos · Proyecto Final**
 
-Propuesta de MVP para la detección automática de oportunidades de precio en búsquedas hoteleras, desarrollada sobre datos históricos de búsquedas de la plataforma ID90Travel.
+Sistema para la detección automática de oportunidades de precio en búsquedas hoteleras (ofertas), desarrollada sobre datos históricos de búsquedas de la plataforma ID90Travel.
 
 ---
 
 ## Tabla de Contenidos
 
+0. [Para Estudiantes — Mentoría DiploDatos 2026](#para-estudiantes--mentoría-diplodatos-2026)
 1. [Contexto: ID90Travel y el Problema](#1-contexto-id90travel-y-el-problema)
 2. [Objetivo del Proyecto](#2-objetivo-del-proyecto)
 3. [Flujo de Trabajo: Scripts y Resultados](#3-flujo-de-trabajo-scripts-y-resultados)
 4. [Contenido del Repositorio](#4-contenido-del-repositorio)
 5. [Fuentes de Datos Disponibles](#5-fuentes-de-datos-disponibles)
-6. [Propuesta de Solución: Diseño del MVP](#6-propuesta-de-solución-diseño-del-mvp)
+6. [Enfoque Explorado: Aproximación Estadística](#6-enfoque-explorado-aproximación-estadística)
 7. [Query de Extracción de Datos](#7-query-de-extracción-de-datos)
 8. [Dataset: Descripción del Esquema de Datos](#8-dataset-descripción-del-esquema-de-datos)
 9. [Archivo de Normalización de Destinos](#9-archivo-de-normalización-de-destinos)
 10. [Pipeline de Procesamiento](#10-pipeline-de-procesamiento)
 11. [Datasets Generados (Outputs)](#11-datasets-generados-outputs)
 12. [Principales Problemáticas Resueltas](#12-principales-problemáticas-resueltas)
-13. [Limitaciones y Alcance del MVP](#13-limitaciones-y-alcance-del-mvp)
+13. [Limitaciones y Alcance del Enfoque Actual](#13-limitaciones-y-alcance-del-enfoque-actual)
 14. [Cómo Ejecutar el Proyecto](#14-cómo-ejecutar-el-proyecto)
 15. [Ejemplos de Uso de la Aplicación](#15-ejemplos-de-uso-de-la-aplicación)
 16. [Extensiones Propuestas](#16-extensiones-propuestas)
+
+---
+
+## Para Estudiantes — Mentoría DiploDatos 2026
+
+Bienvenidos/as a esta mentoría. Este repositorio documenta el objetivo que se persigue en el presente trabajo y combina, en un mismo lugar, un trabajo exploratorio real sobre el problema de clasificación de precios hoteleros desarrollado en ID90Travel. En el repositorio no solo se encontrará el contenido de lo que se pretende en la mentoría, sino que además se incluye una primera versión del análisis realizado, para que sirva como método de inspiración, lineamiento y comparación. El código, el pipeline y los análisis disponibles representan un primer intento de abordar el problema — son material de referencia e inspiración, no una solución definitiva.
+
+El objetivo de la mentoría es que EL grupo explore el problema de forma independiente, comprenda qué funciona y qué no en el enfoque documentado, y proponga su propia solución. El repo existe para que no partan desde cero: los datos son reales, los desafíos técnicos son genuinos y las preguntas sin resolver son las mismas que enfrenta el negocio hoy.
+
+---
+
+### Primeros pasos con el proyecto
+
+**1. Clonar el repositorio**
+```bash
+git clone https://github.com/martinid90/id90-hotel-deals-analysis.git
+cd id90-hotel-deals-analysis
+```
+
+**2. Crear y activar el entorno de trabajo (recomendado: conda)**
+```bash
+conda create -n hotels python=3.11
+conda activate hotels
+pip install -r requirements.txt
+```
+> Alternativa con venv: `python -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt`
+
+**3. Descargar los datos y colocarlos en la carpeta `data/`**
+
+Los archivos de datos históricos están disponibles en Google Drive:
+📁 [Descargar datasets → Google Drive](https://drive.google.com/drive/folders/1fNs03vOkkO2mVKibHKLmCbzgyatv1yCd?usp=drive_link)
+
+Descargar los archivos `datos_historicos_*.csv` y colocarlos en la carpeta `data/` del proyecto:
+
+```
+id90-hotel-deals-analysis/
+└── data/
+    ├── datos_historicos_2024.csv      ← descargar de Drive (~300 MB)
+    ├── datos_historicos_2025.csv      ← descargar de Drive (~300 MB)
+    └── destination_with_nearest.csv   ← ya incluido en el repo
+```
+
+**4. Abrir el notebook de ejemplo**
+```bash
+jupyter notebook exploratory_analysis.ipynb
+```
+
+El notebook `exploratory_analysis.ipynb` carga los datos reales, recorre las etapas del pipeline paso a paso y muestra cómo el sistema clasifica un precio.
+
+---
+
+### El problema de negocio
+
+Cada día millones de personas buscan hoteles sin saber si el precio que ven es una oportunidad conveniente, un precio normal o una estafa del proveedor. La pregunta que guía este proyecto es:
+
+> **¿El precio que se muestra para este destino, en estas fechas y para esta configuración de viaje, es una oferta real o no?**
+
+Es muy importante tener en cuenta el concepto que definiremos como **CONTEXTO**: la combinación de factores que determinan la unidad de análisis o granularidad que servirá como base para la comparación — por ejemplo: `mercado × DOW × DOY × hotel_class × ...`
+
+Responder esa pregunta parece simple pero esconde dos subproblemas que son el núcleo de la mentoría:
+
+- **¿Contra qué se compara?** — Para saber si un precio es bajo necesitás un precio de referencia. Pero esa referencia tiene que venir del mismo mercado, en condiciones comparables. Definir qué es "el mismo mercado" y qué son "condiciones comparables" es el desafío central.
+- **¿Cómo se detecta?** — Una vez que tenés una referencia histórica, ¿qué método usás para determinar si el precio observado es inusualmente bajo? ¿Estadística descriptiva, inferencia, machine learning?
+
+Las preguntas de investigación a continuación desarrollan estos desafíos en detalle.
+
+---
+
+### Preguntas de investigación
+
+Estas son las preguntas centrales que guiarán la mentoría. No tienen una respuesta única ni correcta — el objetivo es que el grupo las explore con los datos y formule sus propias hipótesis y conclusiones.
+
+#### 1. Definición de mercado: ¿contra qué se compara?
+
+**El problema de la referencia**: para saber si un precio es una oferta necesitás un precio de referencia del mismo mercado. Un hotel en Las Vegas no compite con uno en Orlando — aunque ambos sean destinos turísticos norteamericanos. Pero, ¿Las Vegas y Henderson (ciudad a 30 km) son el mismo mercado? ¿Y Las Vegas y Miami? La pregunta de fondo es: **¿qué define que dos destinos pertenecen al mismo mercado hotelero?**
+
+**El problema de la fragmentación**: el dataset contiene ~26.000 nombres de ciudades distintos, con distribución de observaciones muy desigual. El trabajo en turismo hace que se consoliden datos de múltiples proveedores con sus propias estandarizaciones y criterios de nomenclatura. Esto lleva a tener registros que refieren a la misma ciudad bajo nombres distintos. La técnica desarrollada en el siguiente paso es una forma de homogeneizar la base de datos a nombres canónicos que permitan identificar los datos que corresponden a un mismo lugar. Es importante aplicar esta u otra estandarización equivalente para poder trabajar a una escala homogénea de análisis que permita comparaciones válidas. 
+
+**El rol fundamental de `destination_with_nearest.csv`**: este archivo existe para atacar directamente ese problema. Para cada ciudad del dataset, asigna un `nearest_destination_id` — el ID de un destino canónico cercano que tenga masa suficiente de observaciones. Así, "Miami Beach", "South Beach" y "Brickell" dejan de ser tres mercados distintos con escasa historia y pasan a contribuir al mismo contexto de referencia. Sin esta consolidación, el análisis carece de la masa estadística necesaria para que cualquier comparación de precios sea confiable. Es la pieza que hace que el problema sea abordable con los datos disponibles.
+
+**Por qué es una hipótesis y no una verdad**: el criterio de agrupación usado es proximidad geográfica — razonable, pero discutible. ¿Miami y Miami Beach comparten realmente la misma dinámica de precios, o tienen perfiles distintos que al mezclarlos se distorsionan mutuamente? ¿Es la cercanía geográfica el mejor indicador de mercado compartido, o lo son mejor la estacionalidad, el tipo de demanda, o el rango de precios? El ~40% de registros sin mapeo (que caen en fallback por ciudad) representa exactamente los destinos donde la evidencia histórica es más escasa y la comparación más incierta.
+
+**El mercado va más allá de la geografía**: aunque la ubicación es la dimensión más intuitiva, un mercado hotelero comparable puede definirse igualmente por otras variables que produzcan grupos con comportamiento de precio homogéneo. La temporada del año, el día de la semana, la categoría del hotel o la duración de la estadía pueden ser tan determinantes como la geografía — o más. Quizás los precios de un destino de playa en julio se parecen más a los de otro destino de playa en julio que a los del mismo destino en enero: en ese caso la estación sería una dimensión de mercado más relevante que la geografía. La pregunta no es solo *dónde*, sino *cuándo*, *para qué tipo de viajero* y *bajo qué condiciones de oferta y demanda* dos precios son efectivamente comparables.
+
+**Objetivo de esta pregunta**: ¿qué combinación de dimensiones produce grupos de observaciones donde la oferta y la demanda hotelera se mantienen suficientemente homogéneas como para que sus precios sean mutuamente informativos? Las dimensiones candidatas son: localización geográfica, día de la semana, mes o temporada, categoría de precio del hotel, duración de la estadía. No todas son igualmente relevantes — parte del trabajo del TP1 es determinar cuáles sí lo son y a qué escala.
+
+*Variables a explorar: `city`, `state`, `country`, `destination_final`, `avg_price_average`, `count_repeated` (demanda), `avg_hotel_count` (oferta), `date_start` (para derivar DOW y estacionalidad), `nights` (duración de estadía), `number_of_adults`, `number_of_rooms`*
+
+#### 2. Definición de contexto: ¿qué condiciones hacen que dos precios sean comparables?
+
+El precio de un hotel nunca se evalúa en el vacío. Una habitación a $80/noche en Miami puede ser una ganga en diciembre (temporada alta) y un precio elevado en febrero (temporada baja). El mismo precio durante un evento masivo no es comparable con el precio en una semana sin eventos. Y una búsqueda para 1 adulto, 1 noche no es directamente comparable con una para 4 personas, 5 noches — aunque el precio total sea similar.
+
+La pregunta es: **¿qué conjunto de variables define que dos búsquedas son suficientemente similares como para comparar sus precios?**
+
+Dimensiones a considerar:
+- **Temporal**: mes del año, semana del mes, día de la semana, días especiales o eventos
+- **Composición del viaje**: noches de estadía, número de habitaciones, adultos, niños
+- **Categoría del alojamiento**: ¿los hoteles más caros de un destino siguen sus propias dinámicas, independientes del mercado general?
+- **Condiciones del mercado**: ¿el número de hoteles disponibles (`avg_hotel_count`) refleja la oferta y afecta los precios observados?
+
+*La definición de CONTEXTO determina directamente la calidad de cualquier algoritmo de detección: un contexto mal definido produce comparaciones espurias aunque el método estadístico sea impecable.*
+
+**Una precisión sobre la referencia de precio**: construir una referencia histórica no implica comparar precios de hoteles individuales. La referencia es una medida resumen del mercado — lo que el conjunto de opciones disponibles ofrece bajo condiciones comparables — no el precio de un alojamiento específico.
+
+La función de la definición de mercado es, precisamente, *hacer comparables* los datos: identificar el subconjunto de observaciones que comparten condiciones suficientemente similares de oferta y demanda para que sus precios sean mutuamente informativos. Esta es la tarea central del TP2: definir esa granularidad. Una vez identificados los datos comparables y el nivel al que se agrupan, la elección del método de comparación se convierte en una decisión técnica con múltiples alternativas posibles.
+
+#### 3. Algoritmo de detección: ¿cómo determinar si un precio es inusualmente bajo?
+
+Una vez definidos el mercado (pregunta 1) y el contexto de comparación (pregunta 2), el problema se convierte en: **dado un precio observado y la distribución histórica del mercado para ese contexto, ¿cómo determinás si ese precio es inusualmente bajo?**
+
+Hay múltiples enfoques posibles con distintos supuestos y trade-offs:
+- **Estadísticos**: basados en la posición relativa del precio dentro de la distribución histórica (percentiles, distancia a la media o mediana, distribución empírica). Interpretables y eficientes, pero con supuestos implícitos sobre la forma de la distribución.
+- **Supervisados**: si se pueden generar etiquetas de "oferta / no oferta" a partir de los datos históricos, es posible entrenar clasificadores. El desafío es definir qué constituye una etiqueta válida sin ground truth externo.
+- **No supervisados**: clustering de patrones de precio por mercado — ¿emergen naturalmente grupos de contextos con comportamientos de precio cualitativamente distintos?
+
+El repositorio documenta una exploración inicial hacia uno de estos enfoques. Esa exploración puede usarse como referencia de diseño, como punto de partida para entender el problema, o como baseline de comparación para una propuesta alternativa.
+
+**Una pregunta abierta importante**: sin etiquetas externas de "esto era una oferta real", ¿cómo evaluás si tu algoritmo funciona bien o no? Diseñar métricas de evaluación significativas es parte del problema, no un paso posterior trivial.
+
+---
+
+### Dataset
+
+Los archivos de datos son registros históricos de búsquedas de hoteles en la plataforma ID90Travel, agregados por combinación única de destino, fechas y composición de viaje.
+
+#### Columnas principales
+
+| Columna | Descripción | Ejemplo |
+|---------|-------------|---------|
+| `city`, `state`, `country`, `country_code` | Destino geográfico | `"Las Vegas"`, `"Nevada"`, `"United States"`, `"US"` |
+| `date_start`, `date_end`, `nights` | Fechas y duración de la estadía | `2024-06-15`, `2024-06-18`, `3` |
+| `number_of_rooms`, `number_of_adults`, `number_of_kids` | Composición del viaje | `1`, `2`, `0` |
+| `count_repeated` | Cantidad de veces que se realizó esta búsqueda exacta — proxy de demanda | `127` |
+| `avg_hotel_count` | Promedio de hoteles disponibles mostrados — proxy de oferta del mercado | `342` |
+| `avg_price_average` | **Variable central**: precio promedio del conjunto de hoteles en USD | `186.50` |
+| `max_price_high`, `min_price_low` | Rango de precios del mercado en esa búsqueda | `450.00`, `65.00` |
+
+**Importante**: cada fila no representa el precio de un hotel individual, sino el rango estadístico de *todos* los hoteles mostrados en esa búsqueda.
+
+#### Archivo de normalización de destinos: `destination_with_nearest.csv`
+
+Este archivo mapea los ~26.000 nombres de ciudades distintos que aparecen en el dataset a un conjunto reducido de destinos canónicos. La lógica es simple: `"New York"`, `"New York City"` y `"NYC"` deben ser tratadas como el mismo mercado, no como tres mercados distintos con pocas observaciones cada uno.
+
+El archivo asigna a cada ciudad un `nearest_destination_id` usando proximidad geográfica: si una ciudad no tiene un destino canónico asignado directamente, se le asigna el del destino más cercano en coordenadas.
+
+**Esto es una hipótesis de agrupación, no una verdad absoluta.** Actualmente ~40% de los registros del dataset no tienen mapeo y usan el nombre de ciudad como identificador. Los estudiantes pueden cuestionar esta agrupación, explorar cómo afecta la calidad de los baselines y proponer agrupaciones alternativas.
+
+---
+
+### Hitos de la mentoría
+
+Los tres primeros TPs tienen un hilo lógico: el TP1 construye el entendimiento del problema, el TP2 prepara los datos para resolverlo, y el TP3 lo resuelve. Cada grupo va a llegar a conclusiones distintas — eso es parte del punto.
+
+#### TP1 — ¿Qué es un mercado en este problema? · Entrega 31/07
+
+Antes de intentar detectar si un precio es una oferta, hay que resolver una pregunta más básica: *¿contra qué se compara ese precio?* La respuesta no es obvia. No alcanza con decir "contra otros precios del mismo destino" — porque los precios en Las Vegas un viernes de diciembre no tienen nada que ver con los de un martes de febrero, ni los de un hotel económico con los de uno de lujo.
+
+El TP1 es una exploración abierta del dataset para entender qué dimensiones producen grupos de observaciones donde los precios se comportan de forma homogénea — es decir, donde comparar tiene sentido. Algunas dimensiones candidatas: la localización geográfica, el día de la semana, la temporada del año, la categoría del hotel, la duración de la estadía. No es necesario explorar todas — lo importante es llegar a una hipótesis razonada sobre qué combinación produce segmentos internamente coherentes y suficientemente densos como para sostener un análisis estadístico.
+
+Vale preguntarse, por ejemplo: ¿los precios suben los fines de semana? ¿En todos los destinos por igual, o solo en los de ocio? ¿Los hoteles económicos siguen el mismo ciclo estacional que los de lujo? ¿Hay destinos donde la oferta disponible (`avg_hotel_count`) colapsa en ciertas fechas y eso afecta los precios de forma distinta al resto?
+
+*Entrega: notebook con visualizaciones y una hipótesis documentada sobre qué segmentación de mercado propone usar el grupo — y por qué.*
+
+#### TP2 — Preparar los datos y dar forma al mercado · Entrega 28/08
+
+El TP2 tiene dos partes. La primera es operativa: limpiar y estructurar los datos para que sean comparables. Esto implica normalizar el precio a una unidad común (`precio_total / (noches × habitaciones × personas)`), construir las features de contexto que definen el mercado según lo que mostró el TP1 (día de la semana, mes, categoría de hotel, etc.), y aplicar el mapping de `destination_with_nearest.csv` para consolidar los ~26.000 nombres de ciudad en identificadores únicos — o proponer una agrupación alternativa con evidencia que la soporte. Es también el momento de auditar la calidad de los datos: precios inválidos, noches inconsistentes, búsquedas con ocupación cero.
+
+La segunda parte es analítica: con los datos ya segmentados en mercados, explorar cómo se distribuyen los precios dentro de cada uno. ¿Qué forma tiene esa distribución? ¿Hay precios que claramente se alejan del resto? ¿Qué estadístico distingue mejor los precios inusualmente bajos — percentiles, distancia a la media, otra cosa? Este análisis no tiene que llegar a un algoritmo final, pero sí a primeras observaciones concretas que orienten el diseño del TP3.
+
+La decisión más importante del TP2 es la definición de mercado que el grupo va a usar. Vale documentarla y justificarla con evidencia — porque condiciona todo lo que viene después.
+
+*Entrega: dataset curado con features construidas, definición de mercado implementada, y análisis exploratorio de cómo se distribuyen los precios dentro de cada segmento.*
+
+#### TP3 — El algoritmo · Entrega 25/09
+
+Con los datos preparados y los mercados definidos, el TP3 es construir y evaluar un mecanismo que responda, para un precio dado en un contexto dado, si ese precio es inusualmente bajo.
+
+El enfoque es libre: estadístico, supervisado, no supervisado, o una combinación. El repositorio documenta una exploración inicial que puede servir como referencia o punto de partida, no como destino obligado. Lo que importa no es la sofisticación del método sino poder argumentar por qué tiene sentido para este problema, qué supuestos implica y qué limitaciones tiene.
+
+Una pregunta que conviene anticipar desde el principio: sin etiquetas externas de "esto era una oferta real", ¿cómo se evalúa si el algoritmo funciona bien? Diseñar métricas de evaluación que tengan sentido es parte del trabajo, no un detalle a resolver al final. Y una vez que el algoritmo esté implementado, vale probar qué tan sensible es a la definición de mercado del TP2 — un cambio en la segmentación puede cambiar significativamente qué precios se clasifican como oferta.
+
+*Entrega: implementación del algoritmo, evaluación de resultados, análisis de sensibilidad a la segmentación del TP2, y conclusiones honestas sobre qué funciona y qué no.*
+
+#### TP4 — Video de presentación final · Entrega 26/10
+
+Presentación en video del proyecto completo. Las jornadas finales son el **4 y 5 de diciembre**.
+
+---
+
+### Referencia: scripts de extracción de datos
+
+Los archivos `query_historicos.py` y `data/query_historicos_*.py` contienen las consultas SQL que se usaron para extraer los datos históricos desde la base de datos PostgreSQL interna de ID90Travel. **No es necesario ejecutarlos** — los datos ya están disponibles en Drive. Sin embargo, son útiles como referencia si quieren entender exactamente qué tabla y qué campos se consultaron, o si en algún TP deciden proponer una consulta alternativa (por ejemplo, para cruzar con datos de reservas o agregar a diferente granularidad).
 
 ---
 
@@ -43,7 +236,7 @@ La plataforma no cuenta actualmente con una señal que ayude al usuario a tomar 
 
 Este proyecto propone una primera solución al problema usando análisis estadístico histórico: si se cuenta con suficientes búsquedas pasadas para un destino y período dado, es posible construir una distribución de precios de referencia y comparar cualquier precio nuevo contra esa distribución. El resultado de esa comparación es la etiqueta que se mostraría al usuario durante la búsqueda.
 
-**Esta propuesta es tentativa y exploratoria.** Se diseñó como MVP de ciclo rápido usando los datos históricos más accesibles disponibles en la plataforma. A lo largo del documento se identifican sus limitaciones y se describen los caminos para evolucionar la solución.
+**Esta propuesta es tentativa y exploratoria.** Se diseñó como exploración de ciclo rápido usando los datos históricos más accesibles disponibles en la plataforma. A lo largo del documento se identifican sus limitaciones y se describen los caminos para evolucionar la solución.
 
 ---
 
@@ -120,7 +313,7 @@ python query_historicos.py 2025   # extrae datos del año 2025
 | `config.py` | Configuración centralizada del sistema | Define todos los parámetros clave: umbrales de clasificación, percentiles de segmentación, reglas de validación |
 | `app.py` | Interfaz web Streamlit para clasificación interactiva | Muestra cómo se integra el sistema al flujo de búsqueda de un usuario real |
 | `test_system.py` | Tests unitarios de las funciones principales | Verifica la correctitud de la normalización de precios y la lógica de clasificación |
-| `exploratory_analysis.ipynb` | Notebook de exploración del flujo de procesamiento sobre datos de muestra | Permite recorrer las etapas principales sin acceso a la base de datos; refleja una versión simplificada del pipeline (sin segmentación por buckets) |
+| `exploratory_analysis.ipynb` | Notebook de ejemplo del flujo de procesamiento con datos reales | Carga los datasets desde `data/`, recorre las etapas del pipeline paso a paso y muestra cómo clasificar un precio — punto de partida recomendado para el TP1 |
 | `data/destination_with_nearest.csv` | Mapping de ciudades a destinos canónicos | Normaliza los ~26.000 nombres de ciudades del dataset en identificadores únicos de destino |
 | `data/query_historicos_2024.py` | Script standalone de extracción para el año 2024 | Documenta la query original usada para obtener los datos históricos |
 
@@ -142,7 +335,7 @@ En ID90Travel existen tres familias de datos posibles para construir esa referen
 
 Esta tabla registra los eventos de búsqueda que los usuarios realizan en la plataforma. Según el tipo de interacción del usuario, se generan registros con distinta granularidad.
 
-#### Tipo `HOTELS` — **fuente utilizada en este MVP**
+#### Tipo `HOTELS` — **fuente utilizada en la exploración inicial**
 
 Se genera una vez por cada búsqueda general: cuando el usuario ingresa un destino y fechas y el sistema devuelve la lista de hoteles disponibles. El registro captura el **resumen estadístico de todos los precios mostrados** en esa pantalla de resultados.
 
@@ -192,7 +385,7 @@ Esta tabla registra únicamente las transacciones que terminaron en una reserva 
 | `booking_window` | Días de anticipación entre la reserva y la estadía |
 | `cancelled` | Indica si la reserva fue cancelada |
 
-**Por qué no es la fuente primaria de este MVP**: introduce sesgo de selección. Solo captura los precios que alguien aceptó pagar, omitiendo los precios altos que el mercado mostró pero nadie reservó. Usar datos de booking como referencia histórica subestimaría sistemáticamente qué tan buena es una oferta, porque la distribución de referencia ya estaría filtrada hacia precios que los usuarios encontraron razonables.
+**Por qué no es la fuente primaria en la exploración inicial**: introduce sesgo de selección. Solo captura los precios que alguien aceptó pagar, omitiendo los precios altos que el mercado mostró pero nadie reservó. Usar datos de booking como referencia histórica subestimaría sistemáticamente qué tan buena es una oferta, porque la distribución de referencia ya estaría filtrada hacia precios que los usuarios encontraron razonables.
 
 ---
 
@@ -206,21 +399,23 @@ Esta tabla registra únicamente las transacciones que terminaron en una reserva 
 | Información económica | ❌ | ❌ | ✅ COGS, margen, NR |
 | Granularidad del análisis | Destino + período | Hotel + habitación | Transacción confirmada |
 
-### Versiones posibles del sistema
+### Posibles evoluciones del análisis
 
-| Versión | Fuente | Pregunta que responde |
-|---------|--------|----------------------|
-| **v1 — este MVP** | `HOTELS` shopping | ¿Está el rango de precios de este destino/fecha por debajo del histórico? |
-| v2 | `ROOM/RATES` shopping | ¿Está este hotel específico ofreciendo un precio inusualmente bajo hoy? |
-| v3 | Shopping + booking | ¿Es esta oferta barata para el mercado y también rentable para la plataforma? |
+| Nivel | Fuente | Pregunta que permite responder |
+|-------|--------|-------------------------------|
+| **Exploración inicial** | `HOTELS` shopping | ¿Está el rango de precios de este destino/fecha por debajo del histórico? |
+| Nivel 2 | `ROOM/RATES` shopping | ¿Está este hotel específico ofreciendo un precio inusualmente bajo hoy? |
+| Nivel 3 | Shopping + booking | ¿Es esta oferta barata para el mercado y también rentable para la plataforma? |
 
 ---
 
-## 6. Propuesta de Solución: Diseño del MVP
+## 6. Enfoque Explorado: Aproximación Estadística
 
-### Enfoque general
+> *Lo que sigue documenta una de las aproximaciones al problema exploradas en este proyecto. Se presenta como referencia de diseño, no como la solución correcta. Los supuestos tomados, los umbrales elegidos y las decisiones de agrupación son discutibles y pueden mejorarse.*
 
-El sistema propuesto es un **clasificador estadístico** que no requiere entrenamiento supervisado ni etiquetado manual de datos. En lugar de aprender de ejemplos de "oferta vs. no oferta", construye distribuciones de referencia a partir del historial de búsquedas y clasifica cada nuevo precio según su posición relativa en esa distribución. Este enfoque es interpretable y puede actualizarse simplemente re-ejecutando el pipeline sobre datos más recientes.
+### Descripción del enfoque
+
+El enfoque explorado es un **clasificador estadístico** que no requiere entrenamiento supervisado ni etiquetado manual de datos. En lugar de aprender de ejemplos de "oferta vs. no oferta", construye distribuciones de referencia a partir del historial de búsquedas y clasifica cada nuevo precio según su posición relativa en esa distribución. Este enfoque es interpretable y puede actualizarse simplemente re-ejecutando el pipeline sobre datos más recientes.
 
 ### Qué es una línea de base (*baseline*)
 
@@ -459,11 +654,15 @@ El pipeline agrega las siguientes columnas al dataset durante el procesamiento. 
 
 **Archivo**: `data/destination_with_nearest.csv` (1.2 MB, 15.989 referencias)
 
-### Por qué existe este archivo
+### Por qué existe este archivo y por qué es fundamental
 
-Los nombres de ciudades en el dataset presentan inconsistencias de normalización producto de distintas entradas de datos a lo largo del tiempo: `"New York"`, `"New York City"` y `"NYC"` pueden coexistir como tres ciudades distintas, fragmentando las observaciones históricas de un mismo mercado. Sin consolidación, cada variante tendría muy pocos datos y sus distribuciones de precio serían poco confiables.
+El dataset contiene ~26.000 nombres de ciudades distintos — muchos de ellos variantes de la misma ciudad (`"New York"`, `"New York City"`, `"NYC"`) o ciudades satélite de un mismo mercado (`"Miami Beach"`, `"South Beach"`, `"Brickell"`). Si cada nombre de ciudad se trata como un mercado independiente, la mayoría tiene tan pocas observaciones históricas que resulta imposible construir distribuciones de precio estadísticamente confiables sobre ellas.
 
-Este archivo mapea cada variante de nombre a un **destino canónico** con un ID numérico único, reduciendo la fragmentación y permitiendo que todas las búsquedas del mismo mercado contribuyan a una única distribución histórica.
+Este archivo resuelve ese problema mapeando cada ciudad a un **destino canónico** con un ID numérico único. El mecanismo es simple: para cada ciudad del dataset, se asigna el `nearest_destination_id` del destino con mayor masa de datos que esté geográficamente más cerca. Así, observaciones de decenas de ciudades cercanas se consolidan en un único contexto de referencia con cientos o miles de registros — lo que hace posible cualquier análisis estadístico posterior.
+
+**Es la pieza que hace abordable el problema**: sin esta consolidación, la gran mayoría de los ~26.000 "mercados" carecen de suficiente historia para cualquier comparación de precios significativa. El archivo transforma un problema de datos fragmentados en un conjunto de ~50–100 mercados con masa crítica.
+
+**Sin embargo, es una hipótesis**: el criterio de agrupación (proximidad geográfica) es razonable pero discutible. "Más cercano geográficamente" no equivale a "mismo mercado hotelero". Destinos cercanos pueden tener perfiles de precio estructuralmente distintos si sirven a tipos de viajeros diferentes. Esta hipótesis conecta directamente con la primera pregunta de investigación de la mentoría.
 
 ### Columnas
 
@@ -476,7 +675,9 @@ Este archivo mapea cada variante de nombre a un **destino canónico** con un ID 
 | `nearest_destination_id` | ID numérico del destino canónico asignado | `50643` |
 | `nearest_destination_name` | Nombre legible del destino canónico | `"Las Vegas"` |
 
-El `nearest_destination_id` es la clave que usa el sistema en todos los pasos posteriores: cálculo de percentiles, construcción de líneas de base y evaluación en la aplicación. En caso de que una ciudad no tenga mapeo canónico (ocurre en ~40% de los destinos del dataset), el sistema usa el nombre de ciudad como identificador de fallback.
+El `nearest_destination_id` es la clave que usa el sistema en todos los pasos posteriores: cálculo de percentiles, construcción de líneas de base y evaluación en la aplicación. En caso de que una ciudad no tenga mapeo canónico (ocurre en ~40% de los destinos del dataset), el sistema usa el nombre de ciudad como identificador de fallback — esos destinos tienen distribuciones históricas más pobres y cualquier análisis sobre ellos es menos confiable.
+
+La cobertura del mapping no es homogénea: los mercados más grandes y más buscados (ciudades norteamericanas principales) están bien cubiertos; destinos internacionales o ciudades pequeñas tienden a quedar sin mapeo. Entender este sesgo de cobertura es parte del trabajo del TP2.
 
 ---
 
@@ -613,7 +814,7 @@ Reporte de cobertura y calidad. Muestra, para cada combinación de destino y seg
 
 ## 12. Principales Problemáticas Resueltas
 
-Durante el diseño del MVP se identificaron cinco problemas técnicos que, de no resolverse, impedirían que la clasificación fuera significativa. Se describen a continuación junto con las decisiones de diseño adoptadas en cada caso.
+Durante el desarrollo de la exploración inicial se identificaron cinco problemas técnicos que, de no resolverse, impedirían que la clasificación fuera significativa. Se describen a continuación junto con las decisiones de diseño adoptadas en cada caso.
 
 ### 1. Comparación de búsquedas con parámetros heterogéneos
 
@@ -647,7 +848,7 @@ Durante el diseño del MVP se identificaron cinco problemas técnicos que, de no
 
 ---
 
-## 13. Limitaciones y Alcance del MVP
+## 13. Limitaciones y Alcance del Enfoque Actual
 
 Las siguientes limitaciones son conocidas y forman parte del alcance definido para esta primera versión. Se documentan para orientar el trabajo en iteraciones futuras.
 
@@ -669,7 +870,7 @@ Las siguientes limitaciones son conocidas y forman parte del alcance definido pa
 
 ```bash
 git clone https://github.com/martinid90/id90-hotel-deals-analysis.git
-cd deals_analysis
+cd id90-hotel-deals-analysis
 python -m venv .venv
 source .venv/bin/activate      # Linux / macOS
 # .venv\Scripts\activate       # Windows
@@ -718,9 +919,7 @@ streamlit run app.py
 
 ### Explorar con el notebook de ejemplo
 
-El notebook `exploratory_analysis.ipynb` recorre las etapas principales del pipeline sobre datos de muestra sintéticos de diez ciudades norteamericanas. Permite entender la lógica de normalización de precios y clasificación sin necesitar acceso a la base de datos ni al dataset completo.
-
-**Nota**: el notebook implementa una versión simplificada del pipeline (sin la etapa de segmentación por segmentos). Es útil como introducción al flujo de procesamiento, pero para reproducir el comportamiento completo del sistema es necesario ejecutar `pipeline_build_baselines.py` con el dataset real.
+El notebook `exploratory_analysis.ipynb` carga los datos reales desde `data/datos_historicos_*.csv`, recorre las etapas del pipeline paso a paso y muestra cómo clasificar un precio concreto. Es el punto de partida recomendado para el TP1 de la mentoría DiploDatos 2026.
 
 ### Tests
 

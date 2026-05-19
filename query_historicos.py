@@ -120,7 +120,7 @@ def main(year):
     
     if datos is not None:
         # Guardar
-        output_file = config.PRICE_HISTORICALS_DIR / f'historicals_{year}.csv'
+        output_file = config.PRICE_HISTORICALS_DIR / f'datos_historicos_{year}.csv'
         datos.to_csv(output_file, index=False)
         
         logging.info("="*60)
