@@ -13,6 +13,8 @@ data/historicals_*.csv
 data/datos_historicos_*.csv
 data/price_historicals/*.csv
 outputs/
+entregas/**/datos_historicos_*.csv
+entregas/**/outputs/
 
 
 # IDE

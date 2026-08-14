@@ -214,9 +214,104 @@ Presentación en video del proyecto completo. Las jornadas finales son el **4 y 
 
 ---
 
+### Entrega de trabajos prácticos en GitHub
+
+Las entregas de los grupos van en la carpeta `entregas/`, ubicada en la raíz del repositorio. Esa carpeta queda separada del código base del proyecto (`app.py`, `pipeline_build_baselines.py`, `auxiliary_functions.py`) y de los datos (`data/`), para que el material de cada grupo no se mezcle con los archivos comunes de la mentoría.
+
+La estructura esperada para cada grupo es:
+
+```
+entregas/
+├── grupo_01/
+│   ├── README.md
+│   ├── tp1/
+│   │   ├── README.md
+│   │   └── grupo_01_tp1.ipynb
+│   ├── tp2/
+│   │   ├── README.md
+│   │   └── grupo_01_tp2.ipynb
+│   ├── tp3/
+│   │   ├── README.md
+│   │   └── grupo_01_tp3.ipynb
+│   └── tp4/
+│       ├── README.md
+│       └── link_presentacion.md
+└── grupo_02/
+    ├── README.md
+    ├── tp1/
+    │   ├── README.md
+    │   └── grupo_02_tp1.ipynb
+    ├── tp2/
+    │   ├── README.md
+    │   └── grupo_02_tp2.ipynb
+    ├── tp3/
+    │   ├── README.md
+    │   └── grupo_02_tp3.ipynb
+    └── tp4/
+        ├── README.md
+        └── link_presentacion.md
+```
+
+Grupos definidos:
+
+| Grupo | Carpeta | Integrantes |
+|-------|---------|-------------|
+| Grupo 1 | `entregas/grupo_01/` | Camila Ines Amado, Francisco Risculese, Agustin Macrina, Lucilam Pasquetta |
+| Grupo 2 | `entregas/grupo_02/` | Jeremías Taran, Martin Gabriel Gomez, Jael Mataloni, Francisco Cisneros |
+
+Si el grupo entrega más de un notebook, debe quedar claro en el `README.md` del TP cuál es el notebook principal y cuáles son auxiliares.
+
+Reglas prácticas:
+- No subir a GitHub los CSV históricos completos (`datos_historicos_*.csv`) ni outputs pesados. Esos datos se descargan desde Drive y se colocan localmente en `data/`.
+- Si el TP2 genera un dataset curado, subir solo una versión liviana o una muestra si el archivo es grande. El notebook debe explicar cómo reproducirlo desde los datos originales.
+- Usar paths relativos desde la raíz del repo, por ejemplo `data/datos_historicos_2025.csv`, para que cualquier persona pueda ejecutar el notebook después de clonar el proyecto.
+- Cada entrega debe incluir una conclusión explícita: qué probaron, qué encontraron, qué no pudieron explicar y qué decisión metodológica toman para el TP siguiente.
+
+---
+
 ### Referencia: scripts de extracción de datos
 
 Los archivos `query_historicos.py` y `data/query_historicos_*.py` contienen las consultas SQL que se usaron para extraer los datos históricos desde la base de datos PostgreSQL interna de ID90Travel. **No es necesario ejecutarlos** — los datos ya están disponibles en Drive. Sin embargo, son útiles como referencia si quieren entender exactamente qué tabla y qué campos se consultaron, o si en algún TP deciden proponer una consulta alternativa (por ejemplo, para cruzar con datos de reservas o agregar a diferente granularidad).
+
+---
+
+### Preguntas Frecuentes de la Mentoría (FAQ)
+
+Este apartado registra dudas que ya surgieron en el canal y quedaron resueltas, para que no se repitan y para que cualquier grupo pueda partir de lo ya conversado. Se va a ir actualizando a medida que aparezcan nuevas preguntas relevantes para todos.
+
+**¿Podemos tener acceso directo a la base de datos PostgreSQL?**
+
+No — no es viable crear credenciales de conexión externa para el curso. Pero no hace falta: las secciones [5](#5-fuentes-de-datos-disponibles), [7](#7-query-de-extracción-de-datos) y [8](#8-dataset-descripción-del-esquema-de-datos) documentan las tablas de origen, la query real usada para extraer los datos y el esquema completo (columnas originales y derivadas). Si necesitan cruzar o agregar información que no está en los CSV provistos, arman la query que necesiten (usando esas secciones como referencia) y se coordina para correrla y compartir el resultado.
+
+**¿Es válido modificar el mapeo de `destination_with_nearest.csv`?**
+
+Sí, y de hecho es parte de lo que el TP1 invita a cuestionar. El mapeo por proximidad geográfica es un punto de partida razonable pero es una **hipótesis, no una verdad fija** (ver sección [9](#9-archivo-de-normalización-de-destinos)): ¿la cercanía geográfica es siempre el mejor indicador de que dos destinos comparten mercado, o hay pares de destinos cercanos con dinámicas de precio lo bastante distintas como para no fusionarlos?
+
+El enfoque que corresponde y que ya validamos con un grupo: **la geografía sigue siendo el ancla, nunca se reemplaza**. La detección de ofertas mide si un precio es bajo *respecto al nivel histórico de ese destino puntual* — no tiene sentido agrupar destinos lejanos aunque compartan patrón estacional (da igual si dos países tienen la misma temporada alta si sus niveles de precio no son comparables). El procedimiento correcto es: primero filtrar candidatos por cercanía geográfica (por ejemplo, un radio de distancia razonable), y **recién dentro de esos candidatos ya cercanos**, evaluar con algún score si realmente conviene fusionarlos según qué tan similar es su dinámica de precios. Se puede proponer un criterio propio de similitud, siempre que quede documentado: el criterio usado, el umbral de distancia elegido, y algún ejemplo concreto de destinos que el mapeo original agrupaba y que el nuevo criterio separa (o viceversa), con la evidencia que sostiene esa decisión.
+
+**¿Qué pasa si no llegamos a una regresión concluyente para explicar el precio?**
+
+No necesariamente es un problema. Quizás están buscando un resultado demasiado "concluyente", como si el TP tuviera que cerrar con una regresión global que explique claramente el precio. En este problema no necesariamente va por ahí: el contexto que pedimos es justamente la definición de contra qué se compara un precio para decidir si está caro, barato o si puede ser una oportunidad.
+
+Una definición razonable de contexto puede ser:
+
+```
+destino canónico + mes/estación + semana o fin de semana + segmento de precio
+```
+
+Esa definición tiene que estar fundamentada con datos. Si no aparece claramente, puede ser que alguna segregación o división no haya quedado correctamente definida, o que el problema esté más en la interpretación que en el análisis estadístico puntual.
+
+La heterogeneidad no es un error del dataset: es el juego que están jugando. Los datos reales no son datos de juguete; siempre van a mezclar hoteles baratos, medios y caros, destinos con mucha o poca información, meses fuertes y meses débiles. La idea es aprender a controlar esa heterogeneidad, mostrar qué sabemos sobre cómo debería comportarse el problema e intentar demostrarlo con los datos.
+
+Sabemos por negocio, y deberían poder mostrarlo con datos, que el turismo tiene estacionalidad. También sabemos que hay factores que no vamos a poder aislar y que van a entrar como varianza no explicada. El análisis consiste en separar qué factores sí se pueden capturar como variables del problema (`destino`, `mes`, `estación`, `día de semana/fin de semana`, `duración`, `segmento`) y qué parte queda como ruido o variabilidad no explicada.
+
+Dividir en `Budget`, `Mid-range` y `Premium` puede ser una buena forma de controlar la heterogeneidad cuando no tenemos una variable explícita de categoría o estrellas del hotel. Es parecido a usar una categoría proxy: bajo el supuesto de que el precio ayuda a separar gamas de alojamiento, dejamos de comparar hoteles económicos contra hoteles de lujo dentro del mismo destino y mes. Pero hay que interpretar esto con cuidado: si el segmento se construye desde el propio precio, no es una variable externa que explique causalmente el precio, sino una herramienta para segmentar y comparar mejor.
+
+Los clusters pueden servir para describir comportamientos estacionales de destinos. No conviene meterlos simplemente como una variable más sin justificar qué representa cada grupo. Si se usan, tienen que explicar qué patrón captura cada cluster y cómo ayuda a entender el contexto.
+
+Con la imputación hay que ser cuidadosos. Imputar puede servir como ejercicio exploratorio, pero no conviene basar la conclusión principal en datos completados artificialmente. Imputar es extrapolar, y para una decisión de negocio no es ideal que la justificación dependa de datos "inventados". Si necesitan más años de datos reales, en el Drive están 2024 y 2025; si hace falta más información, se coordina para cargarla.
+
+Una conclusión válida puede ser: no encontramos una relación lineal global clara, justamente por la heterogeneidad del problema; por eso proponemos trabajar con baselines estadísticos por contexto. Lo importante es que el notebook muestre el razonamiento completo: qué probaron, qué encontraron, qué no pudieron explicar, cómo aparece la heterogeneidad y cómo proponen controlarla.
 
 ---
 
@@ -316,6 +411,7 @@ python query_historicos.py 2025   # extrae datos del año 2025
 | `exploratory_analysis.ipynb` | Notebook de ejemplo del flujo de procesamiento con datos reales | Carga los datasets desde `data/`, recorre las etapas del pipeline paso a paso y muestra cómo clasificar un precio — punto de partida recomendado para el TP1 |
 | `data/destination_with_nearest.csv` | Mapping de ciudades a destinos canónicos | Normaliza los ~26.000 nombres de ciudades del dataset en identificadores únicos de destino |
 | `data/query_historicos_2024.py` | Script standalone de extracción para el año 2024 | Documenta la query original usada para obtener los datos históricos |
+| `entregas/` | Carpeta de entregas de los grupos | Cada grupo debe usar su subcarpeta (`grupo_01`, `grupo_02`, etc.) y entregar allí sus notebooks, conclusiones y materiales livianos |
 
 **Archivos de datos no incluidos** (`data/datos_historicos_*.csv`, `outputs/`): superan el límite de tamaño de GitHub. Se distribuyen por separado; ver sección [Cómo Ejecutar el Proyecto](#14-cómo-ejecutar-el-proyecto).
 
