@@ -247,6 +247,17 @@ Dicho más directo: el error de mapping no fue usar `destination_with_nearest.cs
 
 Para dejarles una referencia concreta, armé el notebook `notebooks/tp2_mapping_merge_referencia.ipynb` y el script `scripts/destination_mapping_preprocess.py`. El notebook muestra cómo ejecutar el merge y medir coverage; el script deja la lógica reutilizable para que no haya una función distinta en cada entrega.
 
+Cómo usarlo:
+
+```bash
+# desde la raíz del repositorio
+python3 scripts/destination_mapping_preprocess.py \
+  --data-dir data \
+  --mapping data/destination_with_nearest.csv
+```
+
+Ese comando espera encontrar los históricos como `data/datos_historicos_*.csv` y el mapping en `data/destination_with_nearest.csv`. Imprime tres cosas: coverage total, distribución por `match_level` y principales no-matcheados por demanda. El notebook `notebooks/tp2_mapping_merge_referencia.ipynb` hace lo mismo de forma más explicada, con tablas intermedias y ejemplos para auditar falsos matches.
+
 El pretratamiento recomendado hace:
 
 - normalización de mayúsculas, acentos y espacios;
