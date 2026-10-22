@@ -1,0 +1,9 @@
+case_id,city,state,country_code,date_start,date_end,adults,kids,rooms,price,scenario_type,expected_label,notes
+TC001,Orlando,Florida,us,2025-07-10,2025-07-13,2,0,1,95.0,oferta_clara,deal,Ejemplo base enviado por grupo 01
+TC002,Orlando,Florida,us,2025-07-10,2025-07-13,2,0,1,180.0,caro,no_deal,Precio alto para mismo contexto
+TC003,Miami,Florida,us,2025-08-05,2025-08-08,2,1,1,120.0,normal,no_deal,Caso normal
+TC004,Cancun,Quintana Roo,mx,2025-12-20,2025-12-25,2,0,1,80.0,oferta_clara,deal,Alta temporada con precio bajo
+TC005,UnknownCity,,us,2025-09-01,2025-09-03,1,0,1,90.0,fallback,no_deal,Probar comportamiento de fallback geográfico
+TC006,Buenos Aires,Buenos Aires,ar,2025-06-10,2025-06-11,2,0,1,65.0,normal,no_deal,Estadía corta
+TC007,Buenos Aires,Buenos Aires,ar,2025-06-10,2025-06-15,2,0,1,65.0,consistency,no_deal,Mismo precio con mayor nights para verificar unidad de precio
+TC008,Las Vegas,Nevada,us,2025-11-15,2025-11-18,2,0,1,70.0,oferta_clara,deal,Destino con dispersión alta

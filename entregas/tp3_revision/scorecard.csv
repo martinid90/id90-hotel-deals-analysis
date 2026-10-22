@@ -1,0 +1,21 @@
+group,criterion,weight,max_score,score,status,notes,evidence_path
+grupo_01,Estructura de proyecto clara,10,10,9,done,Estructura navegable y componentes separados (API/scoring/config).,entregas/tp3_revision/estado_actual.md
+grupo_01,README completo y ejecutable,10,10,8,done,Permite ejecución; se recomienda mayor detalle de supuestos de datos.,entregas/tp3_revision/estado_actual.md
+grupo_01,Docker build exitoso,15,15,15,done,Build OK (con red host por limitación DNS del entorno).,entregas/tp3_revision/estado_actual.md
+grupo_01,Docker run + API docs,10,10,10,done,/docs responde HTTP 200.,entregas/tp3_revision/estado_actual.md
+grupo_01,Endpoint de inferencia válido,10,10,10,done,POST /predict responde HTTP 200 y payload coherente.,entregas/tp3_revision/estado_actual.md
+grupo_01,Manejo de errores input inválido,5,5,3,partial,No se cerró suite específica de errores inválidos en esta pasada.,entregas/tp3_revision/estado_actual.md
+grupo_01,Pipeline definido (unidad de precio/fallback),10,10,9,done,Lógica de fallback y señal de confianza explícitas.,entregas/tp3_revision/api_results_comparativo.csv
+grupo_01,Set de test documentado,10,10,8,done,Set común de 8 casos documentado para benchmark comparativo.,entregas/tp3_revision/api_test_cases.csv
+grupo_01,Métricas y análisis de errores,10,10,9,done,Accuracy 0.875; precision 1.0; recall 0.667; F1 0.8.,entregas/tp3_revision/comparativo_metricas.csv
+grupo_01,Reproducibilidad/trazabilidad final,10,10,8,done,Script de evaluación y outputs versionados.,entregas/tp3_revision/evaluate_apis.py
+grupo_02,Estructura de proyecto clara,10,10,8,done,Estructura correcta con servicio y API separadas.,entregas/tp3_revision/estado_actual.md
+grupo_02,README completo y ejecutable,10,10,8,done,Ejecución lograda; conviene reforzar explicación de unidad de precio.,entregas/tp3_revision/estado_actual.md
+grupo_02,Docker build exitoso,15,15,15,done,Build OK (con red host por limitación DNS del entorno).,entregas/tp3_revision/estado_actual.md
+grupo_02,Docker run + API docs,10,10,10,done,/docs responde HTTP 200.,entregas/tp3_revision/estado_actual.md
+grupo_02,Endpoint de inferencia válido,10,10,10,done,POST /evaluate responde HTTP 200 y payload coherente.,entregas/tp3_revision/estado_actual.md
+grupo_02,Manejo de errores input inválido,5,5,3,partial,No se cerró suite específica de errores inválidos en esta pasada.,entregas/tp3_revision/estado_actual.md
+grupo_02,Pipeline definido (unidad de precio/fallback),10,10,8,done,Pipeline consistente pero muy sensible a unidad/precio estandarizado.,entregas/tp3_revision/api_results_comparativo.csv
+grupo_02,Set de test documentado,10,10,8,done,Set común de 8 casos documentado para benchmark comparativo.,entregas/tp3_revision/api_test_cases.csv
+grupo_02,Métricas y análisis de errores,10,10,6,done,Accuracy 0.625; recall 0.0 en casos etiquetados deal.,entregas/tp3_revision/comparativo_metricas.csv
+grupo_02,Reproducibilidad/trazabilidad final,10,10,8,done,Script de evaluación y outputs versionados.,entregas/tp3_revision/evaluate_apis.py

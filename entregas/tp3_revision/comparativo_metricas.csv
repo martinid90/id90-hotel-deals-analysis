@@ -1,0 +1,3 @@
+group,n_total_labeled,n_scored,coverage,accuracy,precision,recall,f1,fpr
+grupo_01,8,8,1.0,0.875,1.0,0.6666666666666666,0.8,0.0
+grupo_02,8,8,1.0,0.625,,0.0,,0.0

@@ -1,0 +1,541 @@
+case_id,city,state,country,country_code,date_start,date_end,nights,adults,kids,rooms,price,factor,scenario_type,expected_label,ctx_support,ctx_median,stay_bucket,persons_bucket,country_bin,notes
+RB00001,saint ann,,jamaica,JM,2025-07-16,2025-07-19,3,2,1,1,144.19,0.55,synthetic_deal,deal,60,263.245,2_3,3_4,jm,Generated from 2025 anchor near context median
+RB00002,saint ann,,jamaica,JM,2025-07-16,2025-07-19,3,2,1,1,183.51,0.7,synthetic_deal,deal,60,263.245,2_3,3_4,jm,Generated from 2025 anchor near context median
+RB00003,saint ann,,jamaica,JM,2025-07-16,2025-07-19,3,2,1,1,222.84,0.85,synthetic_borderline,borderline,60,263.245,2_3,3_4,jm,Generated from 2025 anchor near context median
+RB00004,saint ann,,jamaica,JM,2025-07-16,2025-07-19,3,2,1,1,262.16,1.0,synthetic_no_deal,no_deal,60,263.245,2_3,3_4,jm,Generated from 2025 anchor near context median
+RB00005,saint ann,,jamaica,JM,2025-07-16,2025-07-19,3,2,1,1,301.48,1.15,synthetic_no_deal,no_deal,60,263.245,2_3,3_4,jm,Generated from 2025 anchor near context median
+RB00006,saint ann,,jamaica,JM,2025-07-16,2025-07-19,3,2,1,1,353.92,1.35,synthetic_no_deal,no_deal,60,263.245,2_3,3_4,jm,Generated from 2025 anchor near context median
+RB00007,lisbon,área metropolitana de lisboa,portugal,PT,2025-09-26,2025-10-04,8,2,0,1,120.04,0.55,synthetic_deal,deal,53,218.7022,7_plus,2,other,Generated from 2025 anchor near context median
+RB00008,lisbon,área metropolitana de lisboa,portugal,PT,2025-09-26,2025-10-04,8,2,0,1,152.77,0.7,synthetic_deal,deal,53,218.7022,7_plus,2,other,Generated from 2025 anchor near context median
+RB00009,lisbon,área metropolitana de lisboa,portugal,PT,2025-09-26,2025-10-04,8,2,0,1,185.51,0.85,synthetic_borderline,borderline,53,218.7022,7_plus,2,other,Generated from 2025 anchor near context median
+RB00010,lisbon,área metropolitana de lisboa,portugal,PT,2025-09-26,2025-10-04,8,2,0,1,218.25,1.0,synthetic_no_deal,no_deal,53,218.7022,7_plus,2,other,Generated from 2025 anchor near context median
+RB00011,lisbon,área metropolitana de lisboa,portugal,PT,2025-09-26,2025-10-04,8,2,0,1,250.99,1.15,synthetic_no_deal,no_deal,53,218.7022,7_plus,2,other,Generated from 2025 anchor near context median
+RB00012,lisbon,área metropolitana de lisboa,portugal,PT,2025-09-26,2025-10-04,8,2,0,1,294.64,1.35,synthetic_no_deal,no_deal,53,218.7022,7_plus,2,other,Generated from 2025 anchor near context median
+RB00013,seatac,washington,united states of america,US,2025-06-01,2025-06-28,27,2,0,1,99.04,0.55,synthetic_deal,deal,62,188.21,7_plus,2,us,Generated from 2025 anchor near context median
+RB00014,seatac,washington,united states of america,US,2025-06-01,2025-06-28,27,2,0,1,126.05,0.7,synthetic_deal,deal,62,188.21,7_plus,2,us,Generated from 2025 anchor near context median
+RB00015,seatac,washington,united states of america,US,2025-06-01,2025-06-28,27,2,0,1,153.06,0.85,synthetic_borderline,borderline,62,188.21,7_plus,2,us,Generated from 2025 anchor near context median
+RB00016,seatac,washington,united states of america,US,2025-06-01,2025-06-28,27,2,0,1,180.07,1.0,synthetic_no_deal,no_deal,62,188.21,7_plus,2,us,Generated from 2025 anchor near context median
+RB00017,seatac,washington,united states of america,US,2025-06-01,2025-06-28,27,2,0,1,207.08,1.15,synthetic_no_deal,no_deal,62,188.21,7_plus,2,us,Generated from 2025 anchor near context median
+RB00018,seatac,washington,united states of america,US,2025-06-01,2025-06-28,27,2,0,1,243.09,1.35,synthetic_no_deal,no_deal,62,188.21,7_plus,2,us,Generated from 2025 anchor near context median
+RB00019,playa del carmen,quintana roo,mexico,MX,2025-02-15,2025-02-22,7,3,0,1,251.65,0.55,synthetic_deal,deal,51,454.8086,7_plus,3_4,mx,Generated from 2025 anchor near context median
+RB00020,playa del carmen,quintana roo,mexico,MX,2025-02-15,2025-02-22,7,3,0,1,320.28,0.7,synthetic_deal,deal,51,454.8086,7_plus,3_4,mx,Generated from 2025 anchor near context median
+RB00021,playa del carmen,quintana roo,mexico,MX,2025-02-15,2025-02-22,7,3,0,1,388.91,0.85,synthetic_borderline,borderline,51,454.8086,7_plus,3_4,mx,Generated from 2025 anchor near context median
+RB00022,playa del carmen,quintana roo,mexico,MX,2025-02-15,2025-02-22,7,3,0,1,457.55,1.0,synthetic_no_deal,no_deal,51,454.8086,7_plus,3_4,mx,Generated from 2025 anchor near context median
+RB00023,playa del carmen,quintana roo,mexico,MX,2025-02-15,2025-02-22,7,3,0,1,526.18,1.15,synthetic_no_deal,no_deal,51,454.8086,7_plus,3_4,mx,Generated from 2025 anchor near context median
+RB00024,playa del carmen,quintana roo,mexico,MX,2025-02-15,2025-02-22,7,3,0,1,617.69,1.35,synthetic_no_deal,no_deal,51,454.8086,7_plus,3_4,mx,Generated from 2025 anchor near context median
+RB00025,biloxi,mississippi,united states of america,US,2025-03-28,2025-03-31,3,2,0,1,64.38,0.55,synthetic_deal,deal,37,115.65,2_3,2,us,Generated from 2025 anchor near context median
+RB00026,biloxi,mississippi,united states of america,US,2025-03-28,2025-03-31,3,2,0,1,81.94,0.7,synthetic_deal,deal,37,115.65,2_3,2,us,Generated from 2025 anchor near context median
+RB00027,biloxi,mississippi,united states of america,US,2025-03-28,2025-03-31,3,2,0,1,99.5,0.85,synthetic_borderline,borderline,37,115.65,2_3,2,us,Generated from 2025 anchor near context median
+RB00028,biloxi,mississippi,united states of america,US,2025-03-28,2025-03-31,3,2,0,1,117.06,1.0,synthetic_no_deal,no_deal,37,115.65,2_3,2,us,Generated from 2025 anchor near context median
+RB00029,biloxi,mississippi,united states of america,US,2025-03-28,2025-03-31,3,2,0,1,134.62,1.15,synthetic_no_deal,no_deal,37,115.65,2_3,2,us,Generated from 2025 anchor near context median
+RB00030,biloxi,mississippi,united states of america,US,2025-03-28,2025-03-31,3,2,0,1,158.04,1.35,synthetic_no_deal,no_deal,37,115.65,2_3,2,us,Generated from 2025 anchor near context median
+RB00031,ville de bruxelles - stad brussel,brussels-capital,belgium,BE,2025-06-02,2025-06-05,3,2,0,1,85.38,0.55,synthetic_deal,deal,30,154.5188,2_3,2,other,Generated from 2025 anchor near context median
+RB00032,ville de bruxelles - stad brussel,brussels-capital,belgium,BE,2025-06-02,2025-06-05,3,2,0,1,108.66,0.7,synthetic_deal,deal,30,154.5188,2_3,2,other,Generated from 2025 anchor near context median
+RB00033,ville de bruxelles - stad brussel,brussels-capital,belgium,BE,2025-06-02,2025-06-05,3,2,0,1,131.94,0.85,synthetic_borderline,borderline,30,154.5188,2_3,2,other,Generated from 2025 anchor near context median
+RB00034,ville de bruxelles - stad brussel,brussels-capital,belgium,BE,2025-06-02,2025-06-05,3,2,0,1,155.23,1.0,synthetic_no_deal,no_deal,30,154.5188,2_3,2,other,Generated from 2025 anchor near context median
+RB00035,ville de bruxelles - stad brussel,brussels-capital,belgium,BE,2025-06-02,2025-06-05,3,2,0,1,178.51,1.15,synthetic_no_deal,no_deal,30,154.5188,2_3,2,other,Generated from 2025 anchor near context median
+RB00036,ville de bruxelles - stad brussel,brussels-capital,belgium,BE,2025-06-02,2025-06-05,3,2,0,1,209.56,1.35,synthetic_no_deal,no_deal,30,154.5188,2_3,2,other,Generated from 2025 anchor near context median
+RB00037,río piedras,puerto rico,united states,US,2025-03-22,2025-03-24,2,2,0,1,151.6,0.55,synthetic_deal,deal,69,265.0436,2_3,2,us,Generated from 2025 anchor near context median
+RB00038,río piedras,puerto rico,united states,US,2025-03-22,2025-03-24,2,2,0,1,192.94,0.7,synthetic_deal,deal,69,265.0436,2_3,2,us,Generated from 2025 anchor near context median
+RB00039,río piedras,puerto rico,united states,US,2025-03-22,2025-03-24,2,2,0,1,234.29,0.85,synthetic_borderline,borderline,69,265.0436,2_3,2,us,Generated from 2025 anchor near context median
+RB00040,río piedras,puerto rico,united states,US,2025-03-22,2025-03-24,2,2,0,1,275.63,1.0,synthetic_no_deal,no_deal,69,265.0436,2_3,2,us,Generated from 2025 anchor near context median
+RB00041,río piedras,puerto rico,united states,US,2025-03-22,2025-03-24,2,2,0,1,316.98,1.15,synthetic_no_deal,no_deal,69,265.0436,2_3,2,us,Generated from 2025 anchor near context median
+RB00042,río piedras,puerto rico,united states,US,2025-03-22,2025-03-24,2,2,0,1,372.11,1.35,synthetic_no_deal,no_deal,69,265.0436,2_3,2,us,Generated from 2025 anchor near context median
+RB00043,saint petersburg,florida,united states of america,US,2025-08-13,2025-08-14,1,2,0,1,66.04,0.55,synthetic_deal,deal,41,121.175,1,2,us,Generated from 2025 anchor near context median
+RB00044,saint petersburg,florida,united states of america,US,2025-08-13,2025-08-14,1,2,0,1,84.05,0.7,synthetic_deal,deal,41,121.175,1,2,us,Generated from 2025 anchor near context median
+RB00045,saint petersburg,florida,united states of america,US,2025-08-13,2025-08-14,1,2,0,1,102.06,0.85,synthetic_borderline,borderline,41,121.175,1,2,us,Generated from 2025 anchor near context median
+RB00046,saint petersburg,florida,united states of america,US,2025-08-13,2025-08-14,1,2,0,1,120.07,1.0,synthetic_no_deal,no_deal,41,121.175,1,2,us,Generated from 2025 anchor near context median
+RB00047,saint petersburg,florida,united states of america,US,2025-08-13,2025-08-14,1,2,0,1,138.08,1.15,synthetic_no_deal,no_deal,41,121.175,1,2,us,Generated from 2025 anchor near context median
+RB00048,saint petersburg,florida,united states of america,US,2025-08-13,2025-08-14,1,2,0,1,162.09,1.35,synthetic_no_deal,no_deal,41,121.175,1,2,us,Generated from 2025 anchor near context median
+RB00049,cairo,cairo governorate,egypt,EG,2025-03-08,2025-03-11,3,2,0,1,28.63,0.55,synthetic_deal,deal,41,52.92,2_3,2,other,Generated from 2025 anchor near context median
+RB00050,cairo,cairo governorate,egypt,EG,2025-03-08,2025-03-11,3,2,0,1,36.44,0.7,synthetic_deal,deal,41,52.92,2_3,2,other,Generated from 2025 anchor near context median
+RB00051,cairo,cairo governorate,egypt,EG,2025-03-08,2025-03-11,3,2,0,1,44.25,0.85,synthetic_borderline,borderline,41,52.92,2_3,2,other,Generated from 2025 anchor near context median
+RB00052,cairo,cairo governorate,egypt,EG,2025-03-08,2025-03-11,3,2,0,1,52.06,1.0,synthetic_no_deal,no_deal,41,52.92,2_3,2,other,Generated from 2025 anchor near context median
+RB00053,cairo,cairo governorate,egypt,EG,2025-03-08,2025-03-11,3,2,0,1,59.87,1.15,synthetic_no_deal,no_deal,41,52.92,2_3,2,other,Generated from 2025 anchor near context median
+RB00054,cairo,cairo governorate,egypt,EG,2025-03-08,2025-03-11,3,2,0,1,70.28,1.35,synthetic_no_deal,no_deal,41,52.92,2_3,2,other,Generated from 2025 anchor near context median
+RB00055,london,england,united kingdom,GB,2025-02-18,2025-02-22,4,2,0,1,108.69,0.55,synthetic_deal,deal,77,212.4501,4_6,2,other,Generated from 2025 anchor near context median
+RB00056,london,england,united kingdom,GB,2025-02-18,2025-02-22,4,2,0,1,138.33,0.7,synthetic_deal,deal,77,212.4501,4_6,2,other,Generated from 2025 anchor near context median
+RB00057,london,england,united kingdom,GB,2025-02-18,2025-02-22,4,2,0,1,167.97,0.85,synthetic_borderline,borderline,77,212.4501,4_6,2,other,Generated from 2025 anchor near context median
+RB00058,london,england,united kingdom,GB,2025-02-18,2025-02-22,4,2,0,1,197.62,1.0,synthetic_no_deal,no_deal,77,212.4501,4_6,2,other,Generated from 2025 anchor near context median
+RB00059,london,england,united kingdom,GB,2025-02-18,2025-02-22,4,2,0,1,227.26,1.15,synthetic_no_deal,no_deal,77,212.4501,4_6,2,other,Generated from 2025 anchor near context median
+RB00060,london,england,united kingdom,GB,2025-02-18,2025-02-22,4,2,0,1,266.78,1.35,synthetic_no_deal,no_deal,77,212.4501,4_6,2,other,Generated from 2025 anchor near context median
+RB00061,iztapalapa,mexico city,mexico,MX,2025-09-19,2025-09-27,8,2,0,1,53.53,0.55,synthetic_deal,deal,78,99.4613,7_plus,2,mx,Generated from 2025 anchor near context median
+RB00062,iztapalapa,mexico city,mexico,MX,2025-09-19,2025-09-27,8,2,0,1,68.13,0.7,synthetic_deal,deal,78,99.4613,7_plus,2,mx,Generated from 2025 anchor near context median
+RB00063,iztapalapa,mexico city,mexico,MX,2025-09-19,2025-09-27,8,2,0,1,82.73,0.85,synthetic_borderline,borderline,78,99.4613,7_plus,2,mx,Generated from 2025 anchor near context median
+RB00064,iztapalapa,mexico city,mexico,MX,2025-09-19,2025-09-27,8,2,0,1,97.33,1.0,synthetic_no_deal,no_deal,78,99.4613,7_plus,2,mx,Generated from 2025 anchor near context median
+RB00065,iztapalapa,mexico city,mexico,MX,2025-09-19,2025-09-27,8,2,0,1,111.93,1.15,synthetic_no_deal,no_deal,78,99.4613,7_plus,2,mx,Generated from 2025 anchor near context median
+RB00066,iztapalapa,mexico city,mexico,MX,2025-09-19,2025-09-27,8,2,0,1,131.4,1.35,synthetic_no_deal,no_deal,78,99.4613,7_plus,2,mx,Generated from 2025 anchor near context median
+RB00067,teusaquillo,bogota capital district,colombia,CO,2025-11-19,2025-11-21,2,2,0,1,29.12,0.55,synthetic_deal,deal,36,56.3583,2_3,2,other,Generated from 2025 anchor near context median
+RB00068,teusaquillo,bogota capital district,colombia,CO,2025-11-19,2025-11-21,2,2,0,1,37.07,0.7,synthetic_deal,deal,36,56.3583,2_3,2,other,Generated from 2025 anchor near context median
+RB00069,teusaquillo,bogota capital district,colombia,CO,2025-11-19,2025-11-21,2,2,0,1,45.01,0.85,synthetic_borderline,borderline,36,56.3583,2_3,2,other,Generated from 2025 anchor near context median
+RB00070,teusaquillo,bogota capital district,colombia,CO,2025-11-19,2025-11-21,2,2,0,1,52.95,1.0,synthetic_no_deal,no_deal,36,56.3583,2_3,2,other,Generated from 2025 anchor near context median
+RB00071,teusaquillo,bogota capital district,colombia,CO,2025-11-19,2025-11-21,2,2,0,1,60.9,1.15,synthetic_no_deal,no_deal,36,56.3583,2_3,2,other,Generated from 2025 anchor near context median
+RB00072,teusaquillo,bogota capital district,colombia,CO,2025-11-19,2025-11-21,2,2,0,1,71.49,1.35,synthetic_no_deal,no_deal,36,56.3583,2_3,2,other,Generated from 2025 anchor near context median
+RB00073,panama,provincia de panamá,panama,PA,2025-04-18,2025-04-21,3,2,2,1,65.1,0.55,synthetic_deal,deal,34,112.07,2_3,3_4,other,Generated from 2025 anchor near context median
+RB00074,panama,provincia de panamá,panama,PA,2025-04-18,2025-04-21,3,2,2,1,82.86,0.7,synthetic_deal,deal,34,112.07,2_3,3_4,other,Generated from 2025 anchor near context median
+RB00075,panama,provincia de panamá,panama,PA,2025-04-18,2025-04-21,3,2,2,1,100.61,0.85,synthetic_borderline,borderline,34,112.07,2_3,3_4,other,Generated from 2025 anchor near context median
+RB00076,panama,provincia de panamá,panama,PA,2025-04-18,2025-04-21,3,2,2,1,118.37,1.0,synthetic_no_deal,no_deal,34,112.07,2_3,3_4,other,Generated from 2025 anchor near context median
+RB00077,panama,provincia de panamá,panama,PA,2025-04-18,2025-04-21,3,2,2,1,136.13,1.15,synthetic_no_deal,no_deal,34,112.07,2_3,3_4,other,Generated from 2025 anchor near context median
+RB00078,panama,provincia de panamá,panama,PA,2025-04-18,2025-04-21,3,2,2,1,159.8,1.35,synthetic_no_deal,no_deal,34,112.07,2_3,3_4,other,Generated from 2025 anchor near context median
+RB00079,san josé del cabo,south lower california,mexico,MX,2025-03-21,2025-03-26,5,2,0,1,358.48,0.55,synthetic_deal,deal,95,612.6329,4_6,2,mx,Generated from 2025 anchor near context median
+RB00080,san josé del cabo,south lower california,mexico,MX,2025-03-21,2025-03-26,5,2,0,1,456.25,0.7,synthetic_deal,deal,95,612.6329,4_6,2,mx,Generated from 2025 anchor near context median
+RB00081,san josé del cabo,south lower california,mexico,MX,2025-03-21,2025-03-26,5,2,0,1,554.01,0.85,synthetic_borderline,borderline,95,612.6329,4_6,2,mx,Generated from 2025 anchor near context median
+RB00082,san josé del cabo,south lower california,mexico,MX,2025-03-21,2025-03-26,5,2,0,1,651.78,1.0,synthetic_no_deal,no_deal,95,612.6329,4_6,2,mx,Generated from 2025 anchor near context median
+RB00083,san josé del cabo,south lower california,mexico,MX,2025-03-21,2025-03-26,5,2,0,1,749.55,1.15,synthetic_no_deal,no_deal,95,612.6329,4_6,2,mx,Generated from 2025 anchor near context median
+RB00084,san josé del cabo,south lower california,mexico,MX,2025-03-21,2025-03-26,5,2,0,1,879.9,1.35,synthetic_no_deal,no_deal,95,612.6329,4_6,2,mx,Generated from 2025 anchor near context median
+RB00085,lomita park,california,united states of america,US,2025-05-22,2025-05-23,1,2,0,1,82.14,0.55,synthetic_deal,deal,36,149.3025,1,2,us,Generated from 2025 anchor near context median
+RB00086,lomita park,california,united states of america,US,2025-05-22,2025-05-23,1,2,0,1,104.54,0.7,synthetic_deal,deal,36,149.3025,1,2,us,Generated from 2025 anchor near context median
+RB00087,lomita park,california,united states of america,US,2025-05-22,2025-05-23,1,2,0,1,126.94,0.85,synthetic_borderline,borderline,36,149.3025,1,2,us,Generated from 2025 anchor near context median
+RB00088,lomita park,california,united states of america,US,2025-05-22,2025-05-23,1,2,0,1,149.35,1.0,synthetic_no_deal,no_deal,36,149.3025,1,2,us,Generated from 2025 anchor near context median
+RB00089,lomita park,california,united states of america,US,2025-05-22,2025-05-23,1,2,0,1,171.75,1.15,synthetic_no_deal,no_deal,36,149.3025,1,2,us,Generated from 2025 anchor near context median
+RB00090,lomita park,california,united states of america,US,2025-05-22,2025-05-23,1,2,0,1,201.62,1.35,synthetic_no_deal,no_deal,36,149.3025,1,2,us,Generated from 2025 anchor near context median
+RB00091,denver,colorado,united states of america,US,2025-11-02,2025-11-03,1,2,1,1,61.72,0.55,synthetic_deal,deal,87,118.1433,1,3_4,us,Generated from 2025 anchor near context median
+RB00092,denver,colorado,united states of america,US,2025-11-02,2025-11-03,1,2,1,1,78.55,0.7,synthetic_deal,deal,87,118.1433,1,3_4,us,Generated from 2025 anchor near context median
+RB00093,denver,colorado,united states of america,US,2025-11-02,2025-11-03,1,2,1,1,95.38,0.85,synthetic_borderline,borderline,87,118.1433,1,3_4,us,Generated from 2025 anchor near context median
+RB00094,denver,colorado,united states of america,US,2025-11-02,2025-11-03,1,2,1,1,112.21,1.0,synthetic_no_deal,no_deal,87,118.1433,1,3_4,us,Generated from 2025 anchor near context median
+RB00095,denver,colorado,united states of america,US,2025-11-02,2025-11-03,1,2,1,1,129.05,1.15,synthetic_no_deal,no_deal,87,118.1433,1,3_4,us,Generated from 2025 anchor near context median
+RB00096,denver,colorado,united states of america,US,2025-11-02,2025-11-03,1,2,1,1,151.49,1.35,synthetic_no_deal,no_deal,87,118.1433,1,3_4,us,Generated from 2025 anchor near context median
+RB00097,nashville,tennessee,united states of america,US,2025-11-07,2025-11-12,5,2,0,1,85.3,0.55,synthetic_deal,deal,54,142.0446,4_6,2,us,Generated from 2025 anchor near context median
+RB00098,nashville,tennessee,united states of america,US,2025-11-07,2025-11-12,5,2,0,1,108.57,0.7,synthetic_deal,deal,54,142.0446,4_6,2,us,Generated from 2025 anchor near context median
+RB00099,nashville,tennessee,united states of america,US,2025-11-07,2025-11-12,5,2,0,1,131.83,0.85,synthetic_borderline,borderline,54,142.0446,4_6,2,us,Generated from 2025 anchor near context median
+RB00100,nashville,tennessee,united states of america,US,2025-11-07,2025-11-12,5,2,0,1,155.1,1.0,synthetic_no_deal,no_deal,54,142.0446,4_6,2,us,Generated from 2025 anchor near context median
+RB00101,nashville,tennessee,united states of america,US,2025-11-07,2025-11-12,5,2,0,1,178.36,1.15,synthetic_no_deal,no_deal,54,142.0446,4_6,2,us,Generated from 2025 anchor near context median
+RB00102,nashville,tennessee,united states of america,US,2025-11-07,2025-11-12,5,2,0,1,209.38,1.35,synthetic_no_deal,no_deal,54,142.0446,4_6,2,us,Generated from 2025 anchor near context median
+RB00103,austin,texas,united states of america,US,2025-07-09,2025-07-11,2,2,1,1,66.72,0.55,synthetic_deal,deal,63,121.3,2_3,3_4,us,Generated from 2025 anchor near context median
+RB00104,austin,texas,united states of america,US,2025-07-09,2025-07-11,2,2,1,1,84.91,0.7,synthetic_deal,deal,63,121.3,2_3,3_4,us,Generated from 2025 anchor near context median
+RB00105,austin,texas,united states of america,US,2025-07-09,2025-07-11,2,2,1,1,103.1,0.85,synthetic_borderline,borderline,63,121.3,2_3,3_4,us,Generated from 2025 anchor near context median
+RB00106,austin,texas,united states of america,US,2025-07-09,2025-07-11,2,2,1,1,121.3,1.0,synthetic_no_deal,no_deal,63,121.3,2_3,3_4,us,Generated from 2025 anchor near context median
+RB00107,austin,texas,united states of america,US,2025-07-09,2025-07-11,2,2,1,1,139.49,1.15,synthetic_no_deal,no_deal,63,121.3,2_3,3_4,us,Generated from 2025 anchor near context median
+RB00108,austin,texas,united states of america,US,2025-07-09,2025-07-11,2,2,1,1,163.75,1.35,synthetic_no_deal,no_deal,63,121.3,2_3,3_4,us,Generated from 2025 anchor near context median
+RB00109,san juan,puerto rico,united states of america,US,2025-03-21,2025-03-25,4,2,1,1,165.48,0.55,synthetic_deal,deal,59,308.75,4_6,3_4,us,Generated from 2025 anchor near context median
+RB00110,san juan,puerto rico,united states of america,US,2025-03-21,2025-03-25,4,2,1,1,210.62,0.7,synthetic_deal,deal,59,308.75,4_6,3_4,us,Generated from 2025 anchor near context median
+RB00111,san juan,puerto rico,united states of america,US,2025-03-21,2025-03-25,4,2,1,1,255.75,0.85,synthetic_borderline,borderline,59,308.75,4_6,3_4,us,Generated from 2025 anchor near context median
+RB00112,san juan,puerto rico,united states of america,US,2025-03-21,2025-03-25,4,2,1,1,300.88,1.0,synthetic_no_deal,no_deal,59,308.75,4_6,3_4,us,Generated from 2025 anchor near context median
+RB00113,san juan,puerto rico,united states of america,US,2025-03-21,2025-03-25,4,2,1,1,346.01,1.15,synthetic_no_deal,no_deal,59,308.75,4_6,3_4,us,Generated from 2025 anchor near context median
+RB00114,san juan,puerto rico,united states of america,US,2025-03-21,2025-03-25,4,2,1,1,406.19,1.35,synthetic_no_deal,no_deal,59,308.75,4_6,3_4,us,Generated from 2025 anchor near context median
+RB00115,osaka,kinki region,japan,JP,2025-03-25,2025-03-28,3,3,0,1,131.8,0.55,synthetic_deal,deal,67,219.37,2_3,3_4,jp,Generated from 2025 anchor near context median
+RB00116,osaka,kinki region,japan,JP,2025-03-25,2025-03-28,3,3,0,1,167.75,0.7,synthetic_deal,deal,67,219.37,2_3,3_4,jp,Generated from 2025 anchor near context median
+RB00117,osaka,kinki region,japan,JP,2025-03-25,2025-03-28,3,3,0,1,203.69,0.85,synthetic_borderline,borderline,67,219.37,2_3,3_4,jp,Generated from 2025 anchor near context median
+RB00118,osaka,kinki region,japan,JP,2025-03-25,2025-03-28,3,3,0,1,239.64,1.0,synthetic_no_deal,no_deal,67,219.37,2_3,3_4,jp,Generated from 2025 anchor near context median
+RB00119,osaka,kinki region,japan,JP,2025-03-25,2025-03-28,3,3,0,1,275.59,1.15,synthetic_no_deal,no_deal,67,219.37,2_3,3_4,jp,Generated from 2025 anchor near context median
+RB00120,osaka,kinki region,japan,JP,2025-03-25,2025-03-28,3,3,0,1,323.51,1.35,synthetic_no_deal,no_deal,67,219.37,2_3,3_4,jp,Generated from 2025 anchor near context median
+RB00121,richmond,british columbia,canada,CA,2025-05-09,2025-05-12,3,2,0,1,130.94,0.55,synthetic_deal,deal,36,238.58,2_3,2,ca,Generated from 2025 anchor near context median
+RB00122,richmond,british columbia,canada,CA,2025-05-09,2025-05-12,3,2,0,1,166.65,0.7,synthetic_deal,deal,36,238.58,2_3,2,ca,Generated from 2025 anchor near context median
+RB00123,richmond,british columbia,canada,CA,2025-05-09,2025-05-12,3,2,0,1,202.36,0.85,synthetic_borderline,borderline,36,238.58,2_3,2,ca,Generated from 2025 anchor near context median
+RB00124,richmond,british columbia,canada,CA,2025-05-09,2025-05-12,3,2,0,1,238.07,1.0,synthetic_no_deal,no_deal,36,238.58,2_3,2,ca,Generated from 2025 anchor near context median
+RB00125,richmond,british columbia,canada,CA,2025-05-09,2025-05-12,3,2,0,1,273.78,1.15,synthetic_no_deal,no_deal,36,238.58,2_3,2,ca,Generated from 2025 anchor near context median
+RB00126,richmond,british columbia,canada,CA,2025-05-09,2025-05-12,3,2,0,1,321.39,1.35,synthetic_no_deal,no_deal,36,238.58,2_3,2,ca,Generated from 2025 anchor near context median
+RB00127,houston,texas,usa,US,2025-07-19,2025-07-20,1,2,0,1,55.56,0.55,synthetic_deal,deal,83,99.165,1,2,us,Generated from 2025 anchor near context median
+RB00128,houston,texas,usa,US,2025-07-19,2025-07-20,1,2,0,1,70.71,0.7,synthetic_deal,deal,83,99.165,1,2,us,Generated from 2025 anchor near context median
+RB00129,houston,texas,usa,US,2025-07-19,2025-07-20,1,2,0,1,85.87,0.85,synthetic_borderline,borderline,83,99.165,1,2,us,Generated from 2025 anchor near context median
+RB00130,houston,texas,usa,US,2025-07-19,2025-07-20,1,2,0,1,101.02,1.0,synthetic_no_deal,no_deal,83,99.165,1,2,us,Generated from 2025 anchor near context median
+RB00131,houston,texas,usa,US,2025-07-19,2025-07-20,1,2,0,1,116.17,1.15,synthetic_no_deal,no_deal,83,99.165,1,2,us,Generated from 2025 anchor near context median
+RB00132,houston,texas,usa,US,2025-07-19,2025-07-20,1,2,0,1,136.38,1.35,synthetic_no_deal,no_deal,83,99.165,1,2,us,Generated from 2025 anchor near context median
+RB00133,venice,veneto,italy,IT,2025-05-12,2025-05-13,1,2,0,1,117.16,0.55,synthetic_deal,deal,31,198.8367,1,2,other,Generated from 2025 anchor near context median
+RB00134,venice,veneto,italy,IT,2025-05-12,2025-05-13,1,2,0,1,149.11,0.7,synthetic_deal,deal,31,198.8367,1,2,other,Generated from 2025 anchor near context median
+RB00135,venice,veneto,italy,IT,2025-05-12,2025-05-13,1,2,0,1,181.06,0.85,synthetic_borderline,borderline,31,198.8367,1,2,other,Generated from 2025 anchor near context median
+RB00136,venice,veneto,italy,IT,2025-05-12,2025-05-13,1,2,0,1,213.02,1.0,synthetic_no_deal,no_deal,31,198.8367,1,2,other,Generated from 2025 anchor near context median
+RB00137,venice,veneto,italy,IT,2025-05-12,2025-05-13,1,2,0,1,244.97,1.15,synthetic_no_deal,no_deal,31,198.8367,1,2,other,Generated from 2025 anchor near context median
+RB00138,venice,veneto,italy,IT,2025-05-12,2025-05-13,1,2,0,1,287.57,1.35,synthetic_no_deal,no_deal,31,198.8367,1,2,other,Generated from 2025 anchor near context median
+RB00139,spokane,washington,united states,US,2025-11-10,2025-11-13,3,2,0,1,58.09,0.55,synthetic_deal,deal,42,103.4608,2_3,2,us,Generated from 2025 anchor near context median
+RB00140,spokane,washington,united states,US,2025-11-10,2025-11-13,3,2,0,1,73.93,0.7,synthetic_deal,deal,42,103.4608,2_3,2,us,Generated from 2025 anchor near context median
+RB00141,spokane,washington,united states,US,2025-11-10,2025-11-13,3,2,0,1,89.78,0.85,synthetic_borderline,borderline,42,103.4608,2_3,2,us,Generated from 2025 anchor near context median
+RB00142,spokane,washington,united states,US,2025-11-10,2025-11-13,3,2,0,1,105.62,1.0,synthetic_no_deal,no_deal,42,103.4608,2_3,2,us,Generated from 2025 anchor near context median
+RB00143,spokane,washington,united states,US,2025-11-10,2025-11-13,3,2,0,1,121.46,1.15,synthetic_no_deal,no_deal,42,103.4608,2_3,2,us,Generated from 2025 anchor near context median
+RB00144,spokane,washington,united states,US,2025-11-10,2025-11-13,3,2,0,1,142.59,1.35,synthetic_no_deal,no_deal,42,103.4608,2_3,2,us,Generated from 2025 anchor near context median
+RB00145,saint james,,jamaica,JM,2025-07-14,2025-07-19,5,6,4,3,291.8,0.55,synthetic_deal,deal,94,512.8,4_6,5_plus,jm,Generated from 2025 anchor near context median
+RB00146,saint james,,jamaica,JM,2025-07-14,2025-07-19,5,6,4,3,371.38,0.7,synthetic_deal,deal,94,512.8,4_6,5_plus,jm,Generated from 2025 anchor near context median
+RB00147,saint james,,jamaica,JM,2025-07-14,2025-07-19,5,6,4,3,450.96,0.85,synthetic_borderline,borderline,94,512.8,4_6,5_plus,jm,Generated from 2025 anchor near context median
+RB00148,saint james,,jamaica,JM,2025-07-14,2025-07-19,5,6,4,3,530.54,1.0,synthetic_no_deal,no_deal,94,512.8,4_6,5_plus,jm,Generated from 2025 anchor near context median
+RB00149,saint james,,jamaica,JM,2025-07-14,2025-07-19,5,6,4,3,610.12,1.15,synthetic_no_deal,no_deal,94,512.8,4_6,5_plus,jm,Generated from 2025 anchor near context median
+RB00150,saint james,,jamaica,JM,2025-07-14,2025-07-19,5,6,4,3,716.23,1.35,synthetic_no_deal,no_deal,94,512.8,4_6,5_plus,jm,Generated from 2025 anchor near context median
+RB00151,colorado springs,colorado,united states of america,US,2025-06-24,2025-06-26,2,2,1,1,84.76,0.55,synthetic_deal,deal,34,148.4375,2_3,3_4,us,Generated from 2025 anchor near context median
+RB00152,colorado springs,colorado,united states of america,US,2025-06-24,2025-06-26,2,2,1,1,107.87,0.7,synthetic_deal,deal,34,148.4375,2_3,3_4,us,Generated from 2025 anchor near context median
+RB00153,colorado springs,colorado,united states of america,US,2025-06-24,2025-06-26,2,2,1,1,130.99,0.85,synthetic_borderline,borderline,34,148.4375,2_3,3_4,us,Generated from 2025 anchor near context median
+RB00154,colorado springs,colorado,united states of america,US,2025-06-24,2025-06-26,2,2,1,1,154.1,1.0,synthetic_no_deal,no_deal,34,148.4375,2_3,3_4,us,Generated from 2025 anchor near context median
+RB00155,colorado springs,colorado,united states of america,US,2025-06-24,2025-06-26,2,2,1,1,177.22,1.15,synthetic_no_deal,no_deal,34,148.4375,2_3,3_4,us,Generated from 2025 anchor near context median
+RB00156,colorado springs,colorado,united states of america,US,2025-06-24,2025-06-26,2,2,1,1,208.04,1.35,synthetic_no_deal,no_deal,34,148.4375,2_3,3_4,us,Generated from 2025 anchor near context median
+RB00157,los angeles,california,united states of america,US,2025-07-28,2025-07-29,1,2,0,1,89.27,0.55,synthetic_deal,deal,86,167.5297,1,2,us,Generated from 2025 anchor near context median
+RB00158,los angeles,california,united states of america,US,2025-07-28,2025-07-29,1,2,0,1,113.62,0.7,synthetic_deal,deal,86,167.5297,1,2,us,Generated from 2025 anchor near context median
+RB00159,los angeles,california,united states of america,US,2025-07-28,2025-07-29,1,2,0,1,137.96,0.85,synthetic_borderline,borderline,86,167.5297,1,2,us,Generated from 2025 anchor near context median
+RB00160,los angeles,california,united states of america,US,2025-07-28,2025-07-29,1,2,0,1,162.31,1.0,synthetic_no_deal,no_deal,86,167.5297,1,2,us,Generated from 2025 anchor near context median
+RB00161,los angeles,california,united states of america,US,2025-07-28,2025-07-29,1,2,0,1,186.65,1.15,synthetic_no_deal,no_deal,86,167.5297,1,2,us,Generated from 2025 anchor near context median
+RB00162,los angeles,california,united states of america,US,2025-07-28,2025-07-29,1,2,0,1,219.12,1.35,synthetic_no_deal,no_deal,86,167.5297,1,2,us,Generated from 2025 anchor near context median
+RB00163,arlington,virginia,united states of america,US,2025-09-19,2025-09-21,2,2,1,1,87.98,0.55,synthetic_deal,deal,48,164.477,2_3,3_4,us,Generated from 2025 anchor near context median
+RB00164,arlington,virginia,united states of america,US,2025-09-19,2025-09-21,2,2,1,1,111.98,0.7,synthetic_deal,deal,48,164.477,2_3,3_4,us,Generated from 2025 anchor near context median
+RB00165,arlington,virginia,united states of america,US,2025-09-19,2025-09-21,2,2,1,1,135.97,0.85,synthetic_borderline,borderline,48,164.477,2_3,3_4,us,Generated from 2025 anchor near context median
+RB00166,arlington,virginia,united states of america,US,2025-09-19,2025-09-21,2,2,1,1,159.97,1.0,synthetic_no_deal,no_deal,48,164.477,2_3,3_4,us,Generated from 2025 anchor near context median
+RB00167,arlington,virginia,united states of america,US,2025-09-19,2025-09-21,2,2,1,1,183.97,1.15,synthetic_no_deal,no_deal,48,164.477,2_3,3_4,us,Generated from 2025 anchor near context median
+RB00168,arlington,virginia,united states of america,US,2025-09-19,2025-09-21,2,2,1,1,215.96,1.35,synthetic_no_deal,no_deal,48,164.477,2_3,3_4,us,Generated from 2025 anchor near context median
+RB00169,charlotte,north carolina,united states of america,US,2025-06-25,2025-06-29,4,2,0,1,62.83,0.55,synthetic_deal,deal,41,118.614,4_6,2,us,Generated from 2025 anchor near context median
+RB00170,charlotte,north carolina,united states of america,US,2025-06-25,2025-06-29,4,2,0,1,79.97,0.7,synthetic_deal,deal,41,118.614,4_6,2,us,Generated from 2025 anchor near context median
+RB00171,charlotte,north carolina,united states of america,US,2025-06-25,2025-06-29,4,2,0,1,97.11,0.85,synthetic_borderline,borderline,41,118.614,4_6,2,us,Generated from 2025 anchor near context median
+RB00172,charlotte,north carolina,united states of america,US,2025-06-25,2025-06-29,4,2,0,1,114.24,1.0,synthetic_no_deal,no_deal,41,118.614,4_6,2,us,Generated from 2025 anchor near context median
+RB00173,charlotte,north carolina,united states of america,US,2025-06-25,2025-06-29,4,2,0,1,131.38,1.15,synthetic_no_deal,no_deal,41,118.614,4_6,2,us,Generated from 2025 anchor near context median
+RB00174,charlotte,north carolina,united states of america,US,2025-06-25,2025-06-29,4,2,0,1,154.23,1.35,synthetic_no_deal,no_deal,41,118.614,4_6,2,us,Generated from 2025 anchor near context median
+RB00175,phoenix,arizona,united states,US,2025-07-15,2025-07-16,1,2,0,1,46.95,0.55,synthetic_deal,deal,76,94.8471,1,2,us,Generated from 2025 anchor near context median
+RB00176,phoenix,arizona,united states,US,2025-07-15,2025-07-16,1,2,0,1,59.76,0.7,synthetic_deal,deal,76,94.8471,1,2,us,Generated from 2025 anchor near context median
+RB00177,phoenix,arizona,united states,US,2025-07-15,2025-07-16,1,2,0,1,72.56,0.85,synthetic_borderline,borderline,76,94.8471,1,2,us,Generated from 2025 anchor near context median
+RB00178,phoenix,arizona,united states,US,2025-07-15,2025-07-16,1,2,0,1,85.37,1.0,synthetic_no_deal,no_deal,76,94.8471,1,2,us,Generated from 2025 anchor near context median
+RB00179,phoenix,arizona,united states,US,2025-07-15,2025-07-16,1,2,0,1,98.17,1.15,synthetic_no_deal,no_deal,76,94.8471,1,2,us,Generated from 2025 anchor near context median
+RB00180,phoenix,arizona,united states,US,2025-07-15,2025-07-16,1,2,0,1,115.24,1.35,synthetic_no_deal,no_deal,76,94.8471,1,2,us,Generated from 2025 anchor near context median
+RB00181,quintana roo,quintana roo,mexico,MX,2025-03-17,2025-03-22,5,2,3,1,555.89,0.55,synthetic_deal,deal,47,948.165,4_6,5_plus,mx,Generated from 2025 anchor near context median
+RB00182,quintana roo,quintana roo,mexico,MX,2025-03-17,2025-03-22,5,2,3,1,707.5,0.7,synthetic_deal,deal,47,948.165,4_6,5_plus,mx,Generated from 2025 anchor near context median
+RB00183,quintana roo,quintana roo,mexico,MX,2025-03-17,2025-03-22,5,2,3,1,859.1,0.85,synthetic_borderline,borderline,47,948.165,4_6,5_plus,mx,Generated from 2025 anchor near context median
+RB00184,quintana roo,quintana roo,mexico,MX,2025-03-17,2025-03-22,5,2,3,1,1010.71,1.0,synthetic_no_deal,no_deal,47,948.165,4_6,5_plus,mx,Generated from 2025 anchor near context median
+RB00185,quintana roo,quintana roo,mexico,MX,2025-03-17,2025-03-22,5,2,3,1,1162.32,1.15,synthetic_no_deal,no_deal,47,948.165,4_6,5_plus,mx,Generated from 2025 anchor near context median
+RB00186,quintana roo,quintana roo,mexico,MX,2025-03-17,2025-03-22,5,2,3,1,1364.46,1.35,synthetic_no_deal,no_deal,47,948.165,4_6,5_plus,mx,Generated from 2025 anchor near context median
+RB00187,vancouver,british columbia,canada,CA,2025-05-20,2025-05-22,2,2,0,1,120.54,0.55,synthetic_deal,deal,66,219.8967,2_3,2,ca,Generated from 2025 anchor near context median
+RB00188,vancouver,british columbia,canada,CA,2025-05-20,2025-05-22,2,2,0,1,153.42,0.7,synthetic_deal,deal,66,219.8967,2_3,2,ca,Generated from 2025 anchor near context median
+RB00189,vancouver,british columbia,canada,CA,2025-05-20,2025-05-22,2,2,0,1,186.29,0.85,synthetic_borderline,borderline,66,219.8967,2_3,2,ca,Generated from 2025 anchor near context median
+RB00190,vancouver,british columbia,canada,CA,2025-05-20,2025-05-22,2,2,0,1,219.16,1.0,synthetic_no_deal,no_deal,66,219.8967,2_3,2,ca,Generated from 2025 anchor near context median
+RB00191,vancouver,british columbia,canada,CA,2025-05-20,2025-05-22,2,2,0,1,252.04,1.15,synthetic_no_deal,no_deal,66,219.8967,2_3,2,ca,Generated from 2025 anchor near context median
+RB00192,vancouver,british columbia,canada,CA,2025-05-20,2025-05-22,2,2,0,1,295.87,1.35,synthetic_no_deal,no_deal,66,219.8967,2_3,2,ca,Generated from 2025 anchor near context median
+RB00193,hollywood,florida,united states,US,2025-01-28,2025-01-29,1,2,0,1,103.42,0.55,synthetic_deal,deal,50,184.6425,1,2,us,Generated from 2025 anchor near context median
+RB00194,hollywood,florida,united states,US,2025-01-28,2025-01-29,1,2,0,1,131.62,0.7,synthetic_deal,deal,50,184.6425,1,2,us,Generated from 2025 anchor near context median
+RB00195,hollywood,florida,united states,US,2025-01-28,2025-01-29,1,2,0,1,159.83,0.85,synthetic_borderline,borderline,50,184.6425,1,2,us,Generated from 2025 anchor near context median
+RB00196,hollywood,florida,united states,US,2025-01-28,2025-01-29,1,2,0,1,188.03,1.0,synthetic_no_deal,no_deal,50,184.6425,1,2,us,Generated from 2025 anchor near context median
+RB00197,hollywood,florida,united states,US,2025-01-28,2025-01-29,1,2,0,1,216.23,1.15,synthetic_no_deal,no_deal,50,184.6425,1,2,us,Generated from 2025 anchor near context median
+RB00198,hollywood,florida,united states,US,2025-01-28,2025-01-29,1,2,0,1,253.84,1.35,synthetic_no_deal,no_deal,50,184.6425,1,2,us,Generated from 2025 anchor near context median
+RB00199,iztapalapa,mexico city,mexico,MX,2025-07-20,2025-07-27,7,2,0,1,52.33,0.55,synthetic_deal,deal,47,94.95,7_plus,2,mx,Generated from 2025 anchor near context median
+RB00200,iztapalapa,mexico city,mexico,MX,2025-07-20,2025-07-27,7,2,0,1,66.61,0.7,synthetic_deal,deal,47,94.95,7_plus,2,mx,Generated from 2025 anchor near context median
+RB00201,iztapalapa,mexico city,mexico,MX,2025-07-20,2025-07-27,7,2,0,1,80.88,0.85,synthetic_borderline,borderline,47,94.95,7_plus,2,mx,Generated from 2025 anchor near context median
+RB00202,iztapalapa,mexico city,mexico,MX,2025-07-20,2025-07-27,7,2,0,1,95.15,1.0,synthetic_no_deal,no_deal,47,94.95,7_plus,2,mx,Generated from 2025 anchor near context median
+RB00203,iztapalapa,mexico city,mexico,MX,2025-07-20,2025-07-27,7,2,0,1,109.42,1.15,synthetic_no_deal,no_deal,47,94.95,7_plus,2,mx,Generated from 2025 anchor near context median
+RB00204,iztapalapa,mexico city,mexico,MX,2025-07-20,2025-07-27,7,2,0,1,128.45,1.35,synthetic_no_deal,no_deal,47,94.95,7_plus,2,mx,Generated from 2025 anchor near context median
+RB00205,los angeles,california,united states of america,US,2025-11-08,2025-11-11,3,2,2,1,114.14,0.55,synthetic_deal,deal,142,194.5715,2_3,3_4,us,Generated from 2025 anchor near context median
+RB00206,los angeles,california,united states of america,US,2025-11-08,2025-11-11,3,2,2,1,145.27,0.7,synthetic_deal,deal,142,194.5715,2_3,3_4,us,Generated from 2025 anchor near context median
+RB00207,los angeles,california,united states of america,US,2025-11-08,2025-11-11,3,2,2,1,176.39,0.85,synthetic_borderline,borderline,142,194.5715,2_3,3_4,us,Generated from 2025 anchor near context median
+RB00208,los angeles,california,united states of america,US,2025-11-08,2025-11-11,3,2,2,1,207.52,1.0,synthetic_no_deal,no_deal,142,194.5715,2_3,3_4,us,Generated from 2025 anchor near context median
+RB00209,los angeles,california,united states of america,US,2025-11-08,2025-11-11,3,2,2,1,238.65,1.15,synthetic_no_deal,no_deal,142,194.5715,2_3,3_4,us,Generated from 2025 anchor near context median
+RB00210,los angeles,california,united states of america,US,2025-11-08,2025-11-11,3,2,2,1,280.16,1.35,synthetic_no_deal,no_deal,142,194.5715,2_3,3_4,us,Generated from 2025 anchor near context median
+RB00211,college park,georgia,united states of america,US,2025-06-14,2025-06-15,1,3,0,1,63.81,0.55,synthetic_deal,deal,46,120.6192,1,3_4,us,Generated from 2025 anchor near context median
+RB00212,college park,georgia,united states of america,US,2025-06-14,2025-06-15,1,3,0,1,81.21,0.7,synthetic_deal,deal,46,120.6192,1,3_4,us,Generated from 2025 anchor near context median
+RB00213,college park,georgia,united states of america,US,2025-06-14,2025-06-15,1,3,0,1,98.62,0.85,synthetic_borderline,borderline,46,120.6192,1,3_4,us,Generated from 2025 anchor near context median
+RB00214,college park,georgia,united states of america,US,2025-06-14,2025-06-15,1,3,0,1,116.02,1.0,synthetic_no_deal,no_deal,46,120.6192,1,3_4,us,Generated from 2025 anchor near context median
+RB00215,college park,georgia,united states of america,US,2025-06-14,2025-06-15,1,3,0,1,133.42,1.15,synthetic_no_deal,no_deal,46,120.6192,1,3_4,us,Generated from 2025 anchor near context median
+RB00216,college park,georgia,united states of america,US,2025-06-14,2025-06-15,1,3,0,1,156.63,1.35,synthetic_no_deal,no_deal,46,120.6192,1,3_4,us,Generated from 2025 anchor near context median
+RB00217,calgary,alberta,canada,CA,2025-09-08,2025-09-10,2,2,0,1,73.75,0.55,synthetic_deal,deal,51,147.23,2_3,2,ca,Generated from 2025 anchor near context median
+RB00218,calgary,alberta,canada,CA,2025-09-08,2025-09-10,2,2,0,1,93.87,0.7,synthetic_deal,deal,51,147.23,2_3,2,ca,Generated from 2025 anchor near context median
+RB00219,calgary,alberta,canada,CA,2025-09-08,2025-09-10,2,2,0,1,113.98,0.85,synthetic_borderline,borderline,51,147.23,2_3,2,ca,Generated from 2025 anchor near context median
+RB00220,calgary,alberta,canada,CA,2025-09-08,2025-09-10,2,2,0,1,134.09,1.0,synthetic_no_deal,no_deal,51,147.23,2_3,2,ca,Generated from 2025 anchor near context median
+RB00221,calgary,alberta,canada,CA,2025-09-08,2025-09-10,2,2,0,1,154.21,1.15,synthetic_no_deal,no_deal,51,147.23,2_3,2,ca,Generated from 2025 anchor near context median
+RB00222,calgary,alberta,canada,CA,2025-09-08,2025-09-10,2,2,0,1,181.03,1.35,synthetic_no_deal,no_deal,51,147.23,2_3,2,ca,Generated from 2025 anchor near context median
+RB00223,madrid,community of madrid,spain,ES,2025-10-20,2025-10-23,3,1,0,1,133.94,0.55,synthetic_deal,deal,31,242.0625,2_3,1,other,Generated from 2025 anchor near context median
+RB00224,madrid,community of madrid,spain,ES,2025-10-20,2025-10-23,3,1,0,1,170.47,0.7,synthetic_deal,deal,31,242.0625,2_3,1,other,Generated from 2025 anchor near context median
+RB00225,madrid,community of madrid,spain,ES,2025-10-20,2025-10-23,3,1,0,1,207.0,0.85,synthetic_borderline,borderline,31,242.0625,2_3,1,other,Generated from 2025 anchor near context median
+RB00226,madrid,community of madrid,spain,ES,2025-10-20,2025-10-23,3,1,0,1,243.53,1.0,synthetic_no_deal,no_deal,31,242.0625,2_3,1,other,Generated from 2025 anchor near context median
+RB00227,madrid,community of madrid,spain,ES,2025-10-20,2025-10-23,3,1,0,1,280.06,1.15,synthetic_no_deal,no_deal,31,242.0625,2_3,1,other,Generated from 2025 anchor near context median
+RB00228,madrid,community of madrid,spain,ES,2025-10-20,2025-10-23,3,1,0,1,328.77,1.35,synthetic_no_deal,no_deal,31,242.0625,2_3,1,other,Generated from 2025 anchor near context median
+RB00229,denver,colorado,united states of america,US,2025-10-13,2025-10-19,6,2,0,1,77.9,0.55,synthetic_deal,deal,91,134.4386,4_6,2,us,Generated from 2025 anchor near context median
+RB00230,denver,colorado,united states of america,US,2025-10-13,2025-10-19,6,2,0,1,99.14,0.7,synthetic_deal,deal,91,134.4386,4_6,2,us,Generated from 2025 anchor near context median
+RB00231,denver,colorado,united states of america,US,2025-10-13,2025-10-19,6,2,0,1,120.39,0.85,synthetic_borderline,borderline,91,134.4386,4_6,2,us,Generated from 2025 anchor near context median
+RB00232,denver,colorado,united states of america,US,2025-10-13,2025-10-19,6,2,0,1,141.63,1.0,synthetic_no_deal,no_deal,91,134.4386,4_6,2,us,Generated from 2025 anchor near context median
+RB00233,denver,colorado,united states of america,US,2025-10-13,2025-10-19,6,2,0,1,162.87,1.15,synthetic_no_deal,no_deal,91,134.4386,4_6,2,us,Generated from 2025 anchor near context median
+RB00234,denver,colorado,united states of america,US,2025-10-13,2025-10-19,6,2,0,1,191.2,1.35,synthetic_no_deal,no_deal,91,134.4386,4_6,2,us,Generated from 2025 anchor near context median
+RB00235,pasay,,philippines,PH,2025-09-27,2025-09-30,3,2,0,1,29.01,0.55,synthetic_deal,deal,58,50.4653,2_3,2,other,Generated from 2025 anchor near context median
+RB00236,pasay,,philippines,PH,2025-09-27,2025-09-30,3,2,0,1,36.92,0.7,synthetic_deal,deal,58,50.4653,2_3,2,other,Generated from 2025 anchor near context median
+RB00237,pasay,,philippines,PH,2025-09-27,2025-09-30,3,2,0,1,44.83,0.85,synthetic_borderline,borderline,58,50.4653,2_3,2,other,Generated from 2025 anchor near context median
+RB00238,pasay,,philippines,PH,2025-09-27,2025-09-30,3,2,0,1,52.74,1.0,synthetic_no_deal,no_deal,58,50.4653,2_3,2,other,Generated from 2025 anchor near context median
+RB00239,pasay,,philippines,PH,2025-09-27,2025-09-30,3,2,0,1,60.65,1.15,synthetic_no_deal,no_deal,58,50.4653,2_3,2,other,Generated from 2025 anchor near context median
+RB00240,pasay,,philippines,PH,2025-09-27,2025-09-30,3,2,0,1,71.2,1.35,synthetic_no_deal,no_deal,58,50.4653,2_3,2,other,Generated from 2025 anchor near context median
+RB00241,lisbon,área metropolitana de lisboa,portugal,PT,2025-06-01,2025-06-05,4,2,1,1,133.63,0.55,synthetic_deal,deal,42,250.0154,4_6,3_4,other,Generated from 2025 anchor near context median
+RB00242,lisbon,área metropolitana de lisboa,portugal,PT,2025-06-01,2025-06-05,4,2,1,1,170.07,0.7,synthetic_deal,deal,42,250.0154,4_6,3_4,other,Generated from 2025 anchor near context median
+RB00243,lisbon,área metropolitana de lisboa,portugal,PT,2025-06-01,2025-06-05,4,2,1,1,206.52,0.85,synthetic_borderline,borderline,42,250.0154,4_6,3_4,other,Generated from 2025 anchor near context median
+RB00244,lisbon,área metropolitana de lisboa,portugal,PT,2025-06-01,2025-06-05,4,2,1,1,242.96,1.0,synthetic_no_deal,no_deal,42,250.0154,4_6,3_4,other,Generated from 2025 anchor near context median
+RB00245,lisbon,área metropolitana de lisboa,portugal,PT,2025-06-01,2025-06-05,4,2,1,1,279.41,1.15,synthetic_no_deal,no_deal,42,250.0154,4_6,3_4,other,Generated from 2025 anchor near context median
+RB00246,lisbon,área metropolitana de lisboa,portugal,PT,2025-06-01,2025-06-05,4,2,1,1,328.0,1.35,synthetic_no_deal,no_deal,42,250.0154,4_6,3_4,other,Generated from 2025 anchor near context median
+RB00247,san juan antiguo,puerto rico,united states of america,US,2025-04-16,2025-04-20,4,1,0,1,144.65,0.55,synthetic_deal,deal,32,260.5533,4_6,1,us,Generated from 2025 anchor near context median
+RB00248,san juan antiguo,puerto rico,united states of america,US,2025-04-16,2025-04-20,4,1,0,1,184.1,0.7,synthetic_deal,deal,32,260.5533,4_6,1,us,Generated from 2025 anchor near context median
+RB00249,san juan antiguo,puerto rico,united states of america,US,2025-04-16,2025-04-20,4,1,0,1,223.55,0.85,synthetic_borderline,borderline,32,260.5533,4_6,1,us,Generated from 2025 anchor near context median
+RB00250,san juan antiguo,puerto rico,united states of america,US,2025-04-16,2025-04-20,4,1,0,1,263.0,1.0,synthetic_no_deal,no_deal,32,260.5533,4_6,1,us,Generated from 2025 anchor near context median
+RB00251,san juan antiguo,puerto rico,united states of america,US,2025-04-16,2025-04-20,4,1,0,1,302.45,1.15,synthetic_no_deal,no_deal,32,260.5533,4_6,1,us,Generated from 2025 anchor near context median
+RB00252,san juan antiguo,puerto rico,united states of america,US,2025-04-16,2025-04-20,4,1,0,1,355.05,1.35,synthetic_no_deal,no_deal,32,260.5533,4_6,1,us,Generated from 2025 anchor near context median
+RB00253,playa del carmen,quintana roo,mexico,MX,2025-12-20,2025-12-21,1,2,0,1,139.21,0.55,synthetic_deal,deal,31,256.6643,1,2,mx,Generated from 2025 anchor near context median
+RB00254,playa del carmen,quintana roo,mexico,MX,2025-12-20,2025-12-21,1,2,0,1,177.17,0.7,synthetic_deal,deal,31,256.6643,1,2,mx,Generated from 2025 anchor near context median
+RB00255,playa del carmen,quintana roo,mexico,MX,2025-12-20,2025-12-21,1,2,0,1,215.14,0.85,synthetic_borderline,borderline,31,256.6643,1,2,mx,Generated from 2025 anchor near context median
+RB00256,playa del carmen,quintana roo,mexico,MX,2025-12-20,2025-12-21,1,2,0,1,253.1,1.0,synthetic_no_deal,no_deal,31,256.6643,1,2,mx,Generated from 2025 anchor near context median
+RB00257,playa del carmen,quintana roo,mexico,MX,2025-12-20,2025-12-21,1,2,0,1,291.07,1.15,synthetic_no_deal,no_deal,31,256.6643,1,2,mx,Generated from 2025 anchor near context median
+RB00258,playa del carmen,quintana roo,mexico,MX,2025-12-20,2025-12-21,1,2,0,1,341.69,1.35,synthetic_no_deal,no_deal,31,256.6643,1,2,mx,Generated from 2025 anchor near context median
+RB00259,henrico county,virginia,united states of america,US,2025-07-31,2025-08-02,2,2,0,1,60.9,0.55,synthetic_deal,deal,43,110.728,2_3,2,us,Generated from 2025 anchor near context median
+RB00260,henrico county,virginia,united states of america,US,2025-07-31,2025-08-02,2,2,0,1,77.51,0.7,synthetic_deal,deal,43,110.728,2_3,2,us,Generated from 2025 anchor near context median
+RB00261,henrico county,virginia,united states of america,US,2025-07-31,2025-08-02,2,2,0,1,94.12,0.85,synthetic_borderline,borderline,43,110.728,2_3,2,us,Generated from 2025 anchor near context median
+RB00262,henrico county,virginia,united states of america,US,2025-07-31,2025-08-02,2,2,0,1,110.73,1.0,synthetic_no_deal,no_deal,43,110.728,2_3,2,us,Generated from 2025 anchor near context median
+RB00263,henrico county,virginia,united states of america,US,2025-07-31,2025-08-02,2,2,0,1,127.34,1.15,synthetic_no_deal,no_deal,43,110.728,2_3,2,us,Generated from 2025 anchor near context median
+RB00264,henrico county,virginia,united states of america,US,2025-07-31,2025-08-02,2,2,0,1,149.48,1.35,synthetic_no_deal,no_deal,43,110.728,2_3,2,us,Generated from 2025 anchor near context median
+RB00265,san juan antiguo,puerto rico,united states of america,US,2025-04-02,2025-04-07,5,2,0,1,143.54,0.55,synthetic_deal,deal,85,260.3407,4_6,2,us,Generated from 2025 anchor near context median
+RB00266,san juan antiguo,puerto rico,united states of america,US,2025-04-02,2025-04-07,5,2,0,1,182.68,0.7,synthetic_deal,deal,85,260.3407,4_6,2,us,Generated from 2025 anchor near context median
+RB00267,san juan antiguo,puerto rico,united states of america,US,2025-04-02,2025-04-07,5,2,0,1,221.83,0.85,synthetic_borderline,borderline,85,260.3407,4_6,2,us,Generated from 2025 anchor near context median
+RB00268,san juan antiguo,puerto rico,united states of america,US,2025-04-02,2025-04-07,5,2,0,1,260.97,1.0,synthetic_no_deal,no_deal,85,260.3407,4_6,2,us,Generated from 2025 anchor near context median
+RB00269,san juan antiguo,puerto rico,united states of america,US,2025-04-02,2025-04-07,5,2,0,1,300.12,1.15,synthetic_no_deal,no_deal,85,260.3407,4_6,2,us,Generated from 2025 anchor near context median
+RB00270,san juan antiguo,puerto rico,united states of america,US,2025-04-02,2025-04-07,5,2,0,1,352.31,1.35,synthetic_no_deal,no_deal,85,260.3407,4_6,2,us,Generated from 2025 anchor near context median
+RB00271,san diego,california,united states of america,US,2025-02-10,2025-02-14,4,2,2,1,116.58,0.55,synthetic_deal,deal,35,207.41,4_6,3_4,us,Generated from 2025 anchor near context median
+RB00272,san diego,california,united states of america,US,2025-02-10,2025-02-14,4,2,2,1,148.37,0.7,synthetic_deal,deal,35,207.41,4_6,3_4,us,Generated from 2025 anchor near context median
+RB00273,san diego,california,united states of america,US,2025-02-10,2025-02-14,4,2,2,1,180.17,0.85,synthetic_borderline,borderline,35,207.41,4_6,3_4,us,Generated from 2025 anchor near context median
+RB00274,san diego,california,united states of america,US,2025-02-10,2025-02-14,4,2,2,1,211.96,1.0,synthetic_no_deal,no_deal,35,207.41,4_6,3_4,us,Generated from 2025 anchor near context median
+RB00275,san diego,california,united states of america,US,2025-02-10,2025-02-14,4,2,2,1,243.75,1.15,synthetic_no_deal,no_deal,35,207.41,4_6,3_4,us,Generated from 2025 anchor near context median
+RB00276,san diego,california,united states of america,US,2025-02-10,2025-02-14,4,2,2,1,286.15,1.35,synthetic_no_deal,no_deal,35,207.41,4_6,3_4,us,Generated from 2025 anchor near context median
+RB00277,kahului,hawaii,united states of america,US,2025-11-09,2025-11-14,5,2,0,1,213.35,0.55,synthetic_deal,deal,58,416.6643,4_6,2,us,Generated from 2025 anchor near context median
+RB00278,kahului,hawaii,united states of america,US,2025-11-09,2025-11-14,5,2,0,1,271.54,0.7,synthetic_deal,deal,58,416.6643,4_6,2,us,Generated from 2025 anchor near context median
+RB00279,kahului,hawaii,united states of america,US,2025-11-09,2025-11-14,5,2,0,1,329.73,0.85,synthetic_borderline,borderline,58,416.6643,4_6,2,us,Generated from 2025 anchor near context median
+RB00280,kahului,hawaii,united states of america,US,2025-11-09,2025-11-14,5,2,0,1,387.92,1.0,synthetic_no_deal,no_deal,58,416.6643,4_6,2,us,Generated from 2025 anchor near context median
+RB00281,kahului,hawaii,united states of america,US,2025-11-09,2025-11-14,5,2,0,1,446.1,1.15,synthetic_no_deal,no_deal,58,416.6643,4_6,2,us,Generated from 2025 anchor near context median
+RB00282,kahului,hawaii,united states of america,US,2025-11-09,2025-11-14,5,2,0,1,523.69,1.35,synthetic_no_deal,no_deal,58,416.6643,4_6,2,us,Generated from 2025 anchor near context median
+RB00283,frankfurt,hesse,germany,DE,2025-07-10,2025-07-13,3,2,0,1,54.98,0.55,synthetic_deal,deal,45,104.16,2_3,2,other,Generated from 2025 anchor near context median
+RB00284,frankfurt,hesse,germany,DE,2025-07-10,2025-07-13,3,2,0,1,69.98,0.7,synthetic_deal,deal,45,104.16,2_3,2,other,Generated from 2025 anchor near context median
+RB00285,frankfurt,hesse,germany,DE,2025-07-10,2025-07-13,3,2,0,1,84.97,0.85,synthetic_borderline,borderline,45,104.16,2_3,2,other,Generated from 2025 anchor near context median
+RB00286,frankfurt,hesse,germany,DE,2025-07-10,2025-07-13,3,2,0,1,99.97,1.0,synthetic_no_deal,no_deal,45,104.16,2_3,2,other,Generated from 2025 anchor near context median
+RB00287,frankfurt,hesse,germany,DE,2025-07-10,2025-07-13,3,2,0,1,114.97,1.15,synthetic_no_deal,no_deal,45,104.16,2_3,2,other,Generated from 2025 anchor near context median
+RB00288,frankfurt,hesse,germany,DE,2025-07-10,2025-07-13,3,2,0,1,134.96,1.35,synthetic_no_deal,no_deal,45,104.16,2_3,2,other,Generated from 2025 anchor near context median
+RB00289,phoenix,arizona,united states,US,2025-01-14,2025-01-15,1,1,0,1,77.98,0.55,synthetic_deal,deal,59,143.0167,1,1,us,Generated from 2025 anchor near context median
+RB00290,phoenix,arizona,united states,US,2025-01-14,2025-01-15,1,1,0,1,99.25,0.7,synthetic_deal,deal,59,143.0167,1,1,us,Generated from 2025 anchor near context median
+RB00291,phoenix,arizona,united states,US,2025-01-14,2025-01-15,1,1,0,1,120.52,0.85,synthetic_borderline,borderline,59,143.0167,1,1,us,Generated from 2025 anchor near context median
+RB00292,phoenix,arizona,united states,US,2025-01-14,2025-01-15,1,1,0,1,141.78,1.0,synthetic_no_deal,no_deal,59,143.0167,1,1,us,Generated from 2025 anchor near context median
+RB00293,phoenix,arizona,united states,US,2025-01-14,2025-01-15,1,1,0,1,163.05,1.15,synthetic_no_deal,no_deal,59,143.0167,1,1,us,Generated from 2025 anchor near context median
+RB00294,phoenix,arizona,united states,US,2025-01-14,2025-01-15,1,1,0,1,191.41,1.35,synthetic_no_deal,no_deal,59,143.0167,1,1,us,Generated from 2025 anchor near context median
+RB00295,cape town,western cape,south africa,ZA,2025-10-18,2025-10-20,2,2,0,1,96.88,0.55,synthetic_deal,deal,64,169.385,2_3,2,other,Generated from 2025 anchor near context median
+RB00296,cape town,western cape,south africa,ZA,2025-10-18,2025-10-20,2,2,0,1,123.3,0.7,synthetic_deal,deal,64,169.385,2_3,2,other,Generated from 2025 anchor near context median
+RB00297,cape town,western cape,south africa,ZA,2025-10-18,2025-10-20,2,2,0,1,149.73,0.85,synthetic_borderline,borderline,64,169.385,2_3,2,other,Generated from 2025 anchor near context median
+RB00298,cape town,western cape,south africa,ZA,2025-10-18,2025-10-20,2,2,0,1,176.15,1.0,synthetic_no_deal,no_deal,64,169.385,2_3,2,other,Generated from 2025 anchor near context median
+RB00299,cape town,western cape,south africa,ZA,2025-10-18,2025-10-20,2,2,0,1,202.57,1.15,synthetic_no_deal,no_deal,64,169.385,2_3,2,other,Generated from 2025 anchor near context median
+RB00300,cape town,western cape,south africa,ZA,2025-10-18,2025-10-20,2,2,0,1,237.8,1.35,synthetic_no_deal,no_deal,64,169.385,2_3,2,other,Generated from 2025 anchor near context median
+RB00301,comuna 14 - el poblado,antioquia,colombia,CO,2025-11-02,2025-11-12,10,2,0,1,39.22,0.55,synthetic_deal,deal,31,72.03,7_plus,2,other,Generated from 2025 anchor near context median
+RB00302,comuna 14 - el poblado,antioquia,colombia,CO,2025-11-02,2025-11-12,10,2,0,1,49.92,0.7,synthetic_deal,deal,31,72.03,7_plus,2,other,Generated from 2025 anchor near context median
+RB00303,comuna 14 - el poblado,antioquia,colombia,CO,2025-11-02,2025-11-12,10,2,0,1,60.62,0.85,synthetic_borderline,borderline,31,72.03,7_plus,2,other,Generated from 2025 anchor near context median
+RB00304,comuna 14 - el poblado,antioquia,colombia,CO,2025-11-02,2025-11-12,10,2,0,1,71.31,1.0,synthetic_no_deal,no_deal,31,72.03,7_plus,2,other,Generated from 2025 anchor near context median
+RB00305,comuna 14 - el poblado,antioquia,colombia,CO,2025-11-02,2025-11-12,10,2,0,1,82.01,1.15,synthetic_no_deal,no_deal,31,72.03,7_plus,2,other,Generated from 2025 anchor near context median
+RB00306,comuna 14 - el poblado,antioquia,colombia,CO,2025-11-02,2025-11-12,10,2,0,1,96.28,1.35,synthetic_no_deal,no_deal,31,72.03,7_plus,2,other,Generated from 2025 anchor near context median
+RB00307,albuquerque,new mexico,usa,US,2025-08-31,2025-09-01,1,2,0,1,54.45,0.55,synthetic_deal,deal,37,106.77,1,2,us,Generated from 2025 anchor near context median
+RB00308,albuquerque,new mexico,usa,US,2025-08-31,2025-09-01,1,2,0,1,69.3,0.7,synthetic_deal,deal,37,106.77,1,2,us,Generated from 2025 anchor near context median
+RB00309,albuquerque,new mexico,usa,US,2025-08-31,2025-09-01,1,2,0,1,84.14,0.85,synthetic_borderline,borderline,37,106.77,1,2,us,Generated from 2025 anchor near context median
+RB00310,albuquerque,new mexico,usa,US,2025-08-31,2025-09-01,1,2,0,1,98.99,1.0,synthetic_no_deal,no_deal,37,106.77,1,2,us,Generated from 2025 anchor near context median
+RB00311,albuquerque,new mexico,usa,US,2025-08-31,2025-09-01,1,2,0,1,113.84,1.15,synthetic_no_deal,no_deal,37,106.77,1,2,us,Generated from 2025 anchor near context median
+RB00312,albuquerque,new mexico,usa,US,2025-08-31,2025-09-01,1,2,0,1,133.64,1.35,synthetic_no_deal,no_deal,37,106.77,1,2,us,Generated from 2025 anchor near context median
+RB00313,saint philip,antigua,antigua and barbuda,AG,2025-04-18,2025-04-21,3,2,0,1,178.91,0.55,synthetic_deal,deal,32,359.685,2_3,2,other,Generated from 2025 anchor near context median
+RB00314,saint philip,antigua,antigua and barbuda,AG,2025-04-18,2025-04-21,3,2,0,1,227.71,0.7,synthetic_deal,deal,32,359.685,2_3,2,other,Generated from 2025 anchor near context median
+RB00315,saint philip,antigua,antigua and barbuda,AG,2025-04-18,2025-04-21,3,2,0,1,276.5,0.85,synthetic_borderline,borderline,32,359.685,2_3,2,other,Generated from 2025 anchor near context median
+RB00316,saint philip,antigua,antigua and barbuda,AG,2025-04-18,2025-04-21,3,2,0,1,325.3,1.0,synthetic_no_deal,no_deal,32,359.685,2_3,2,other,Generated from 2025 anchor near context median
+RB00317,saint philip,antigua,antigua and barbuda,AG,2025-04-18,2025-04-21,3,2,0,1,374.09,1.15,synthetic_no_deal,no_deal,32,359.685,2_3,2,other,Generated from 2025 anchor near context median
+RB00318,saint philip,antigua,antigua and barbuda,AG,2025-04-18,2025-04-21,3,2,0,1,439.15,1.35,synthetic_no_deal,no_deal,32,359.685,2_3,2,other,Generated from 2025 anchor near context median
+RB00319,paris,ile-de-france,france,FR,2025-10-21,2025-10-23,2,1,0,1,168.94,0.55,synthetic_deal,deal,54,282.6547,2_3,1,other,Generated from 2025 anchor near context median
+RB00320,paris,ile-de-france,france,FR,2025-10-21,2025-10-23,2,1,0,1,215.01,0.7,synthetic_deal,deal,54,282.6547,2_3,1,other,Generated from 2025 anchor near context median
+RB00321,paris,ile-de-france,france,FR,2025-10-21,2025-10-23,2,1,0,1,261.09,0.85,synthetic_borderline,borderline,54,282.6547,2_3,1,other,Generated from 2025 anchor near context median
+RB00322,paris,ile-de-france,france,FR,2025-10-21,2025-10-23,2,1,0,1,307.16,1.0,synthetic_no_deal,no_deal,54,282.6547,2_3,1,other,Generated from 2025 anchor near context median
+RB00323,paris,ile-de-france,france,FR,2025-10-21,2025-10-23,2,1,0,1,353.23,1.15,synthetic_no_deal,no_deal,54,282.6547,2_3,1,other,Generated from 2025 anchor near context median
+RB00324,paris,ile-de-france,france,FR,2025-10-21,2025-10-23,2,1,0,1,414.67,1.35,synthetic_no_deal,no_deal,54,282.6547,2_3,1,other,Generated from 2025 anchor near context median
+RB00325,portland,oregon,united states of america,US,2025-04-06,2025-04-12,6,2,0,1,61.84,0.55,synthetic_deal,deal,51,112.05,4_6,2,us,Generated from 2025 anchor near context median
+RB00326,portland,oregon,united states of america,US,2025-04-06,2025-04-12,6,2,0,1,78.7,0.7,synthetic_deal,deal,51,112.05,4_6,2,us,Generated from 2025 anchor near context median
+RB00327,portland,oregon,united states of america,US,2025-04-06,2025-04-12,6,2,0,1,95.57,0.85,synthetic_borderline,borderline,51,112.05,4_6,2,us,Generated from 2025 anchor near context median
+RB00328,portland,oregon,united states of america,US,2025-04-06,2025-04-12,6,2,0,1,112.43,1.0,synthetic_no_deal,no_deal,51,112.05,4_6,2,us,Generated from 2025 anchor near context median
+RB00329,portland,oregon,united states of america,US,2025-04-06,2025-04-12,6,2,0,1,129.29,1.15,synthetic_no_deal,no_deal,51,112.05,4_6,2,us,Generated from 2025 anchor near context median
+RB00330,portland,oregon,united states of america,US,2025-04-06,2025-04-12,6,2,0,1,151.78,1.35,synthetic_no_deal,no_deal,51,112.05,4_6,2,us,Generated from 2025 anchor near context median
+RB00331,saint james,,jamaica,JM,2025-12-19,2025-12-24,5,2,2,1,253.09,0.55,synthetic_deal,deal,105,459.5567,4_6,3_4,jm,Generated from 2025 anchor near context median
+RB00332,saint james,,jamaica,JM,2025-12-19,2025-12-24,5,2,2,1,322.11,0.7,synthetic_deal,deal,105,459.5567,4_6,3_4,jm,Generated from 2025 anchor near context median
+RB00333,saint james,,jamaica,JM,2025-12-19,2025-12-24,5,2,2,1,391.13,0.85,synthetic_borderline,borderline,105,459.5567,4_6,3_4,jm,Generated from 2025 anchor near context median
+RB00334,saint james,,jamaica,JM,2025-12-19,2025-12-24,5,2,2,1,460.16,1.0,synthetic_no_deal,no_deal,105,459.5567,4_6,3_4,jm,Generated from 2025 anchor near context median
+RB00335,saint james,,jamaica,JM,2025-12-19,2025-12-24,5,2,2,1,529.18,1.15,synthetic_no_deal,no_deal,105,459.5567,4_6,3_4,jm,Generated from 2025 anchor near context median
+RB00336,saint james,,jamaica,JM,2025-12-19,2025-12-24,5,2,2,1,621.21,1.35,synthetic_no_deal,no_deal,105,459.5567,4_6,3_4,jm,Generated from 2025 anchor near context median
+RB00337,los angeles,california,united states,US,2025-03-22,2025-03-27,5,5,0,1,171.95,0.55,synthetic_deal,deal,32,321.0241,4_6,5_plus,us,Generated from 2025 anchor near context median
+RB00338,los angeles,california,united states,US,2025-03-22,2025-03-27,5,5,0,1,218.85,0.7,synthetic_deal,deal,32,321.0241,4_6,5_plus,us,Generated from 2025 anchor near context median
+RB00339,los angeles,california,united states,US,2025-03-22,2025-03-27,5,5,0,1,265.74,0.85,synthetic_borderline,borderline,32,321.0241,4_6,5_plus,us,Generated from 2025 anchor near context median
+RB00340,los angeles,california,united states,US,2025-03-22,2025-03-27,5,5,0,1,312.64,1.0,synthetic_no_deal,no_deal,32,321.0241,4_6,5_plus,us,Generated from 2025 anchor near context median
+RB00341,los angeles,california,united states,US,2025-03-22,2025-03-27,5,5,0,1,359.54,1.15,synthetic_no_deal,no_deal,32,321.0241,4_6,5_plus,us,Generated from 2025 anchor near context median
+RB00342,los angeles,california,united states,US,2025-03-22,2025-03-27,5,5,0,1,422.06,1.35,synthetic_no_deal,no_deal,32,321.0241,4_6,5_plus,us,Generated from 2025 anchor near context median
+RB00343,newark,new jersey,united states of america,US,2025-07-04,2025-07-06,2,2,1,1,100.34,0.55,synthetic_deal,deal,49,188.45,2_3,3_4,us,Generated from 2025 anchor near context median
+RB00344,newark,new jersey,united states of america,US,2025-07-04,2025-07-06,2,2,1,1,127.7,0.7,synthetic_deal,deal,49,188.45,2_3,3_4,us,Generated from 2025 anchor near context median
+RB00345,newark,new jersey,united states of america,US,2025-07-04,2025-07-06,2,2,1,1,155.07,0.85,synthetic_borderline,borderline,49,188.45,2_3,3_4,us,Generated from 2025 anchor near context median
+RB00346,newark,new jersey,united states of america,US,2025-07-04,2025-07-06,2,2,1,1,182.43,1.0,synthetic_no_deal,no_deal,49,188.45,2_3,3_4,us,Generated from 2025 anchor near context median
+RB00347,newark,new jersey,united states of america,US,2025-07-04,2025-07-06,2,2,1,1,209.79,1.15,synthetic_no_deal,no_deal,49,188.45,2_3,3_4,us,Generated from 2025 anchor near context median
+RB00348,newark,new jersey,united states of america,US,2025-07-04,2025-07-06,2,2,1,1,246.28,1.35,synthetic_no_deal,no_deal,49,188.45,2_3,3_4,us,Generated from 2025 anchor near context median
+RB00349,cape town,western cape,south africa,ZA,2025-10-27,2025-10-30,3,2,0,1,84.61,0.55,synthetic_deal,deal,64,169.385,2_3,2,other,Generated from 2025 anchor near context median
+RB00350,cape town,western cape,south africa,ZA,2025-10-27,2025-10-30,3,2,0,1,107.68,0.7,synthetic_deal,deal,64,169.385,2_3,2,other,Generated from 2025 anchor near context median
+RB00351,cape town,western cape,south africa,ZA,2025-10-27,2025-10-30,3,2,0,1,130.76,0.85,synthetic_borderline,borderline,64,169.385,2_3,2,other,Generated from 2025 anchor near context median
+RB00352,cape town,western cape,south africa,ZA,2025-10-27,2025-10-30,3,2,0,1,153.83,1.0,synthetic_no_deal,no_deal,64,169.385,2_3,2,other,Generated from 2025 anchor near context median
+RB00353,cape town,western cape,south africa,ZA,2025-10-27,2025-10-30,3,2,0,1,176.9,1.15,synthetic_no_deal,no_deal,64,169.385,2_3,2,other,Generated from 2025 anchor near context median
+RB00354,cape town,western cape,south africa,ZA,2025-10-27,2025-10-30,3,2,0,1,207.67,1.35,synthetic_no_deal,no_deal,64,169.385,2_3,2,other,Generated from 2025 anchor near context median
+RB00355,brisbane,california,united states of america,US,2025-03-05,2025-03-06,1,2,0,1,56.59,0.55,synthetic_deal,deal,44,111.6791,1,2,us,Generated from 2025 anchor near context median
+RB00356,brisbane,california,united states of america,US,2025-03-05,2025-03-06,1,2,0,1,72.02,0.7,synthetic_deal,deal,44,111.6791,1,2,us,Generated from 2025 anchor near context median
+RB00357,brisbane,california,united states of america,US,2025-03-05,2025-03-06,1,2,0,1,87.45,0.85,synthetic_borderline,borderline,44,111.6791,1,2,us,Generated from 2025 anchor near context median
+RB00358,brisbane,california,united states of america,US,2025-03-05,2025-03-06,1,2,0,1,102.89,1.0,synthetic_no_deal,no_deal,44,111.6791,1,2,us,Generated from 2025 anchor near context median
+RB00359,brisbane,california,united states of america,US,2025-03-05,2025-03-06,1,2,0,1,118.32,1.15,synthetic_no_deal,no_deal,44,111.6791,1,2,us,Generated from 2025 anchor near context median
+RB00360,brisbane,california,united states of america,US,2025-03-05,2025-03-06,1,2,0,1,138.9,1.35,synthetic_no_deal,no_deal,44,111.6791,1,2,us,Generated from 2025 anchor near context median
+RB00361,pasay,,philippines,PH,2025-06-17,2025-06-21,4,2,0,1,23.33,0.55,synthetic_deal,deal,45,43.585,4_6,2,other,Generated from 2025 anchor near context median
+RB00362,pasay,,philippines,PH,2025-06-17,2025-06-21,4,2,0,1,29.69,0.7,synthetic_deal,deal,45,43.585,4_6,2,other,Generated from 2025 anchor near context median
+RB00363,pasay,,philippines,PH,2025-06-17,2025-06-21,4,2,0,1,36.06,0.85,synthetic_borderline,borderline,45,43.585,4_6,2,other,Generated from 2025 anchor near context median
+RB00364,pasay,,philippines,PH,2025-06-17,2025-06-21,4,2,0,1,42.42,1.0,synthetic_no_deal,no_deal,45,43.585,4_6,2,other,Generated from 2025 anchor near context median
+RB00365,pasay,,philippines,PH,2025-06-17,2025-06-21,4,2,0,1,48.78,1.15,synthetic_no_deal,no_deal,45,43.585,4_6,2,other,Generated from 2025 anchor near context median
+RB00366,pasay,,philippines,PH,2025-06-17,2025-06-21,4,2,0,1,57.27,1.35,synthetic_no_deal,no_deal,45,43.585,4_6,2,other,Generated from 2025 anchor near context median
+RB00367,los angeles,california,usa,US,2025-09-16,2025-09-17,1,4,0,1,91.84,0.55,synthetic_deal,deal,131,184.435,1,3_4,us,Generated from 2025 anchor near context median
+RB00368,los angeles,california,usa,US,2025-09-16,2025-09-17,1,4,0,1,116.89,0.7,synthetic_deal,deal,131,184.435,1,3_4,us,Generated from 2025 anchor near context median
+RB00369,los angeles,california,usa,US,2025-09-16,2025-09-17,1,4,0,1,141.94,0.85,synthetic_borderline,borderline,131,184.435,1,3_4,us,Generated from 2025 anchor near context median
+RB00370,los angeles,california,usa,US,2025-09-16,2025-09-17,1,4,0,1,166.99,1.0,synthetic_no_deal,no_deal,131,184.435,1,3_4,us,Generated from 2025 anchor near context median
+RB00371,los angeles,california,usa,US,2025-09-16,2025-09-17,1,4,0,1,192.04,1.15,synthetic_no_deal,no_deal,131,184.435,1,3_4,us,Generated from 2025 anchor near context median
+RB00372,los angeles,california,usa,US,2025-09-16,2025-09-17,1,4,0,1,225.44,1.35,synthetic_no_deal,no_deal,131,184.435,1,3_4,us,Generated from 2025 anchor near context median
+RB00373,nerima,,japan,JP,2025-03-17,2025-03-21,4,3,0,1,165.97,0.55,synthetic_deal,deal,56,295.7,4_6,3_4,jp,Generated from 2025 anchor near context median
+RB00374,nerima,,japan,JP,2025-03-17,2025-03-21,4,3,0,1,211.24,0.7,synthetic_deal,deal,56,295.7,4_6,3_4,jp,Generated from 2025 anchor near context median
+RB00375,nerima,,japan,JP,2025-03-17,2025-03-21,4,3,0,1,256.5,0.85,synthetic_borderline,borderline,56,295.7,4_6,3_4,jp,Generated from 2025 anchor near context median
+RB00376,nerima,,japan,JP,2025-03-17,2025-03-21,4,3,0,1,301.77,1.0,synthetic_no_deal,no_deal,56,295.7,4_6,3_4,jp,Generated from 2025 anchor near context median
+RB00377,nerima,,japan,JP,2025-03-17,2025-03-21,4,3,0,1,347.04,1.15,synthetic_no_deal,no_deal,56,295.7,4_6,3_4,jp,Generated from 2025 anchor near context median
+RB00378,nerima,,japan,JP,2025-03-17,2025-03-21,4,3,0,1,407.39,1.35,synthetic_no_deal,no_deal,56,295.7,4_6,3_4,jp,Generated from 2025 anchor near context median
+RB00379,rome,lazio,italy,IT,2025-04-22,2025-04-25,3,1,0,1,123.14,0.55,synthetic_deal,deal,37,223.105,2_3,1,other,Generated from 2025 anchor near context median
+RB00380,rome,lazio,italy,IT,2025-04-22,2025-04-25,3,1,0,1,156.72,0.7,synthetic_deal,deal,37,223.105,2_3,1,other,Generated from 2025 anchor near context median
+RB00381,rome,lazio,italy,IT,2025-04-22,2025-04-25,3,1,0,1,190.31,0.85,synthetic_borderline,borderline,37,223.105,2_3,1,other,Generated from 2025 anchor near context median
+RB00382,rome,lazio,italy,IT,2025-04-22,2025-04-25,3,1,0,1,223.89,1.0,synthetic_no_deal,no_deal,37,223.105,2_3,1,other,Generated from 2025 anchor near context median
+RB00383,rome,lazio,italy,IT,2025-04-22,2025-04-25,3,1,0,1,257.47,1.15,synthetic_no_deal,no_deal,37,223.105,2_3,1,other,Generated from 2025 anchor near context median
+RB00384,rome,lazio,italy,IT,2025-04-22,2025-04-25,3,1,0,1,302.25,1.35,synthetic_no_deal,no_deal,37,223.105,2_3,1,other,Generated from 2025 anchor near context median
+RB00385,osaka,osaka prefecture,japan,JP,2025-09-05,2025-09-07,2,2,0,1,88.14,0.55,synthetic_deal,deal,64,172.1234,2_3,2,jp,Generated from 2025 anchor near context median
+RB00386,osaka,osaka prefecture,japan,JP,2025-09-05,2025-09-07,2,2,0,1,112.17,0.7,synthetic_deal,deal,64,172.1234,2_3,2,jp,Generated from 2025 anchor near context median
+RB00387,osaka,osaka prefecture,japan,JP,2025-09-05,2025-09-07,2,2,0,1,136.21,0.85,synthetic_borderline,borderline,64,172.1234,2_3,2,jp,Generated from 2025 anchor near context median
+RB00388,osaka,osaka prefecture,japan,JP,2025-09-05,2025-09-07,2,2,0,1,160.25,1.0,synthetic_no_deal,no_deal,64,172.1234,2_3,2,jp,Generated from 2025 anchor near context median
+RB00389,osaka,osaka prefecture,japan,JP,2025-09-05,2025-09-07,2,2,0,1,184.29,1.15,synthetic_no_deal,no_deal,64,172.1234,2_3,2,jp,Generated from 2025 anchor near context median
+RB00390,osaka,osaka prefecture,japan,JP,2025-09-05,2025-09-07,2,2,0,1,216.33,1.35,synthetic_no_deal,no_deal,64,172.1234,2_3,2,jp,Generated from 2025 anchor near context median
+RB00391,nashville,tennessee,united states of america,US,2025-08-18,2025-08-19,1,2,0,1,68.37,0.55,synthetic_deal,deal,37,124.9415,1,2,us,Generated from 2025 anchor near context median
+RB00392,nashville,tennessee,united states of america,US,2025-08-18,2025-08-19,1,2,0,1,87.02,0.7,synthetic_deal,deal,37,124.9415,1,2,us,Generated from 2025 anchor near context median
+RB00393,nashville,tennessee,united states of america,US,2025-08-18,2025-08-19,1,2,0,1,105.67,0.85,synthetic_borderline,borderline,37,124.9415,1,2,us,Generated from 2025 anchor near context median
+RB00394,nashville,tennessee,united states of america,US,2025-08-18,2025-08-19,1,2,0,1,124.31,1.0,synthetic_no_deal,no_deal,37,124.9415,1,2,us,Generated from 2025 anchor near context median
+RB00395,nashville,tennessee,united states of america,US,2025-08-18,2025-08-19,1,2,0,1,142.96,1.15,synthetic_no_deal,no_deal,37,124.9415,1,2,us,Generated from 2025 anchor near context median
+RB00396,nashville,tennessee,united states of america,US,2025-08-18,2025-08-19,1,2,0,1,167.82,1.35,synthetic_no_deal,no_deal,37,124.9415,1,2,us,Generated from 2025 anchor near context median
+RB00397,nassau,,the bahamas,BS,2025-06-05,2025-06-09,4,2,0,1,175.04,0.55,synthetic_deal,deal,90,320.144,4_6,2,other,Generated from 2025 anchor near context median
+RB00398,nassau,,the bahamas,BS,2025-06-05,2025-06-09,4,2,0,1,222.78,0.7,synthetic_deal,deal,90,320.144,4_6,2,other,Generated from 2025 anchor near context median
+RB00399,nassau,,the bahamas,BS,2025-06-05,2025-06-09,4,2,0,1,270.52,0.85,synthetic_borderline,borderline,90,320.144,4_6,2,other,Generated from 2025 anchor near context median
+RB00400,nassau,,the bahamas,BS,2025-06-05,2025-06-09,4,2,0,1,318.26,1.0,synthetic_no_deal,no_deal,90,320.144,4_6,2,other,Generated from 2025 anchor near context median
+RB00401,nassau,,the bahamas,BS,2025-06-05,2025-06-09,4,2,0,1,366.0,1.15,synthetic_no_deal,no_deal,90,320.144,4_6,2,other,Generated from 2025 anchor near context median
+RB00402,nassau,,the bahamas,BS,2025-06-05,2025-06-09,4,2,0,1,429.65,1.35,synthetic_no_deal,no_deal,90,320.144,4_6,2,other,Generated from 2025 anchor near context median
+RB00403,grapevine,texas,united states of america,US,2025-04-09,2025-04-12,3,2,0,1,66.57,0.55,synthetic_deal,deal,48,112.4461,2_3,2,us,Generated from 2025 anchor near context median
+RB00404,grapevine,texas,united states of america,US,2025-04-09,2025-04-12,3,2,0,1,84.72,0.7,synthetic_deal,deal,48,112.4461,2_3,2,us,Generated from 2025 anchor near context median
+RB00405,grapevine,texas,united states of america,US,2025-04-09,2025-04-12,3,2,0,1,102.88,0.85,synthetic_borderline,borderline,48,112.4461,2_3,2,us,Generated from 2025 anchor near context median
+RB00406,grapevine,texas,united states of america,US,2025-04-09,2025-04-12,3,2,0,1,121.03,1.0,synthetic_no_deal,no_deal,48,112.4461,2_3,2,us,Generated from 2025 anchor near context median
+RB00407,grapevine,texas,united states of america,US,2025-04-09,2025-04-12,3,2,0,1,139.18,1.15,synthetic_no_deal,no_deal,48,112.4461,2_3,2,us,Generated from 2025 anchor near context median
+RB00408,grapevine,texas,united states of america,US,2025-04-09,2025-04-12,3,2,0,1,163.39,1.35,synthetic_no_deal,no_deal,48,112.4461,2_3,2,us,Generated from 2025 anchor near context median
+RB00409,anchorage,alaska,united states,US,2025-08-01,2025-08-02,1,2,0,1,192.72,0.55,synthetic_deal,deal,62,321.4436,1,2,us,Generated from 2025 anchor near context median
+RB00410,anchorage,alaska,united states,US,2025-08-01,2025-08-02,1,2,0,1,245.28,0.7,synthetic_deal,deal,62,321.4436,1,2,us,Generated from 2025 anchor near context median
+RB00411,anchorage,alaska,united states,US,2025-08-01,2025-08-02,1,2,0,1,297.84,0.85,synthetic_borderline,borderline,62,321.4436,1,2,us,Generated from 2025 anchor near context median
+RB00412,anchorage,alaska,united states,US,2025-08-01,2025-08-02,1,2,0,1,350.4,1.0,synthetic_no_deal,no_deal,62,321.4436,1,2,us,Generated from 2025 anchor near context median
+RB00413,anchorage,alaska,united states,US,2025-08-01,2025-08-02,1,2,0,1,402.96,1.15,synthetic_no_deal,no_deal,62,321.4436,1,2,us,Generated from 2025 anchor near context median
+RB00414,anchorage,alaska,united states,US,2025-08-01,2025-08-02,1,2,0,1,473.04,1.35,synthetic_no_deal,no_deal,62,321.4436,1,2,us,Generated from 2025 anchor near context median
+RB00415,lisbon,área metropolitana de lisboa,portugal,PT,2025-04-30,2025-05-01,1,2,0,1,85.92,0.55,synthetic_deal,deal,30,159.118,1,2,other,Generated from 2025 anchor near context median
+RB00416,lisbon,área metropolitana de lisboa,portugal,PT,2025-04-30,2025-05-01,1,2,0,1,109.36,0.7,synthetic_deal,deal,30,159.118,1,2,other,Generated from 2025 anchor near context median
+RB00417,lisbon,área metropolitana de lisboa,portugal,PT,2025-04-30,2025-05-01,1,2,0,1,132.79,0.85,synthetic_borderline,borderline,30,159.118,1,2,other,Generated from 2025 anchor near context median
+RB00418,lisbon,área metropolitana de lisboa,portugal,PT,2025-04-30,2025-05-01,1,2,0,1,156.23,1.0,synthetic_no_deal,no_deal,30,159.118,1,2,other,Generated from 2025 anchor near context median
+RB00419,lisbon,área metropolitana de lisboa,portugal,PT,2025-04-30,2025-05-01,1,2,0,1,179.66,1.15,synthetic_no_deal,no_deal,30,159.118,1,2,other,Generated from 2025 anchor near context median
+RB00420,lisbon,área metropolitana de lisboa,portugal,PT,2025-04-30,2025-05-01,1,2,0,1,210.91,1.35,synthetic_no_deal,no_deal,30,159.118,1,2,other,Generated from 2025 anchor near context median
+RB00421,dania beach,florida,usa,US,2025-11-19,2025-11-21,2,2,0,1,94.75,0.55,synthetic_deal,deal,33,172.28,2_3,2,us,Generated from 2025 anchor near context median
+RB00422,dania beach,florida,usa,US,2025-11-19,2025-11-21,2,2,0,1,120.6,0.7,synthetic_deal,deal,33,172.28,2_3,2,us,Generated from 2025 anchor near context median
+RB00423,dania beach,florida,usa,US,2025-11-19,2025-11-21,2,2,0,1,146.44,0.85,synthetic_borderline,borderline,33,172.28,2_3,2,us,Generated from 2025 anchor near context median
+RB00424,dania beach,florida,usa,US,2025-11-19,2025-11-21,2,2,0,1,172.28,1.0,synthetic_no_deal,no_deal,33,172.28,2_3,2,us,Generated from 2025 anchor near context median
+RB00425,dania beach,florida,usa,US,2025-11-19,2025-11-21,2,2,0,1,198.12,1.15,synthetic_no_deal,no_deal,33,172.28,2_3,2,us,Generated from 2025 anchor near context median
+RB00426,dania beach,florida,usa,US,2025-11-19,2025-11-21,2,2,0,1,232.58,1.35,synthetic_no_deal,no_deal,33,172.28,2_3,2,us,Generated from 2025 anchor near context median
+RB00427,knoxville,tennessee,usa,US,2025-02-14,2025-02-16,2,2,0,1,71.54,0.55,synthetic_deal,deal,37,118.334,2_3,2,us,Generated from 2025 anchor near context median
+RB00428,knoxville,tennessee,usa,US,2025-02-14,2025-02-16,2,2,0,1,91.06,0.7,synthetic_deal,deal,37,118.334,2_3,2,us,Generated from 2025 anchor near context median
+RB00429,knoxville,tennessee,usa,US,2025-02-14,2025-02-16,2,2,0,1,110.57,0.85,synthetic_borderline,borderline,37,118.334,2_3,2,us,Generated from 2025 anchor near context median
+RB00430,knoxville,tennessee,usa,US,2025-02-14,2025-02-16,2,2,0,1,130.08,1.0,synthetic_no_deal,no_deal,37,118.334,2_3,2,us,Generated from 2025 anchor near context median
+RB00431,knoxville,tennessee,usa,US,2025-02-14,2025-02-16,2,2,0,1,149.59,1.15,synthetic_no_deal,no_deal,37,118.334,2_3,2,us,Generated from 2025 anchor near context median
+RB00432,knoxville,tennessee,usa,US,2025-02-14,2025-02-16,2,2,0,1,175.61,1.35,synthetic_no_deal,no_deal,37,118.334,2_3,2,us,Generated from 2025 anchor near context median
+RB00433,savannah,georgia,united states of america,US,2025-05-31,2025-06-03,3,1,0,1,105.66,0.55,synthetic_deal,deal,32,210.9123,2_3,1,us,Generated from 2025 anchor near context median
+RB00434,savannah,georgia,united states of america,US,2025-05-31,2025-06-03,3,1,0,1,134.48,0.7,synthetic_deal,deal,32,210.9123,2_3,1,us,Generated from 2025 anchor near context median
+RB00435,savannah,georgia,united states of america,US,2025-05-31,2025-06-03,3,1,0,1,163.29,0.85,synthetic_borderline,borderline,32,210.9123,2_3,1,us,Generated from 2025 anchor near context median
+RB00436,savannah,georgia,united states of america,US,2025-05-31,2025-06-03,3,1,0,1,192.11,1.0,synthetic_no_deal,no_deal,32,210.9123,2_3,1,us,Generated from 2025 anchor near context median
+RB00437,savannah,georgia,united states of america,US,2025-05-31,2025-06-03,3,1,0,1,220.93,1.15,synthetic_no_deal,no_deal,32,210.9123,2_3,1,us,Generated from 2025 anchor near context median
+RB00438,savannah,georgia,united states of america,US,2025-05-31,2025-06-03,3,1,0,1,259.35,1.35,synthetic_no_deal,no_deal,32,210.9123,2_3,1,us,Generated from 2025 anchor near context median
+RB00439,devonshire,,bermuda,BM,2025-09-24,2025-09-29,5,2,0,1,251.93,0.55,synthetic_deal,deal,30,487.9835,4_6,2,other,Generated from 2025 anchor near context median
+RB00440,devonshire,,bermuda,BM,2025-09-24,2025-09-29,5,2,0,1,320.64,0.7,synthetic_deal,deal,30,487.9835,4_6,2,other,Generated from 2025 anchor near context median
+RB00441,devonshire,,bermuda,BM,2025-09-24,2025-09-29,5,2,0,1,389.35,0.85,synthetic_borderline,borderline,30,487.9835,4_6,2,other,Generated from 2025 anchor near context median
+RB00442,devonshire,,bermuda,BM,2025-09-24,2025-09-29,5,2,0,1,458.06,1.0,synthetic_no_deal,no_deal,30,487.9835,4_6,2,other,Generated from 2025 anchor near context median
+RB00443,devonshire,,bermuda,BM,2025-09-24,2025-09-29,5,2,0,1,526.77,1.15,synthetic_no_deal,no_deal,30,487.9835,4_6,2,other,Generated from 2025 anchor near context median
+RB00444,devonshire,,bermuda,BM,2025-09-24,2025-09-29,5,2,0,1,618.38,1.35,synthetic_no_deal,no_deal,30,487.9835,4_6,2,other,Generated from 2025 anchor near context median
+RB00445,atlantic city,new jersey,united states of america,US,2025-04-13,2025-04-14,1,3,1,1,85.85,0.55,synthetic_deal,deal,31,165.41,1,3_4,us,Generated from 2025 anchor near context median
+RB00446,atlantic city,new jersey,united states of america,US,2025-04-13,2025-04-14,1,3,1,1,109.26,0.7,synthetic_deal,deal,31,165.41,1,3_4,us,Generated from 2025 anchor near context median
+RB00447,atlantic city,new jersey,united states of america,US,2025-04-13,2025-04-14,1,3,1,1,132.68,0.85,synthetic_borderline,borderline,31,165.41,1,3_4,us,Generated from 2025 anchor near context median
+RB00448,atlantic city,new jersey,united states of america,US,2025-04-13,2025-04-14,1,3,1,1,156.09,1.0,synthetic_no_deal,no_deal,31,165.41,1,3_4,us,Generated from 2025 anchor near context median
+RB00449,atlantic city,new jersey,united states of america,US,2025-04-13,2025-04-14,1,3,1,1,179.5,1.15,synthetic_no_deal,no_deal,31,165.41,1,3_4,us,Generated from 2025 anchor near context median
+RB00450,atlantic city,new jersey,united states of america,US,2025-04-13,2025-04-14,1,3,1,1,210.72,1.35,synthetic_no_deal,no_deal,31,165.41,1,3_4,us,Generated from 2025 anchor near context median
+RB00451,fort lauderdale,florida,united states of america,US,2025-08-08,2025-08-10,2,4,0,2,84.09,0.55,synthetic_deal,deal,102,166.49,2_3,3_4,us,Generated from 2025 anchor near context median
+RB00452,fort lauderdale,florida,united states of america,US,2025-08-08,2025-08-10,2,4,0,2,107.02,0.7,synthetic_deal,deal,102,166.49,2_3,3_4,us,Generated from 2025 anchor near context median
+RB00453,fort lauderdale,florida,united states of america,US,2025-08-08,2025-08-10,2,4,0,2,129.96,0.85,synthetic_borderline,borderline,102,166.49,2_3,3_4,us,Generated from 2025 anchor near context median
+RB00454,fort lauderdale,florida,united states of america,US,2025-08-08,2025-08-10,2,4,0,2,152.89,1.0,synthetic_no_deal,no_deal,102,166.49,2_3,3_4,us,Generated from 2025 anchor near context median
+RB00455,fort lauderdale,florida,united states of america,US,2025-08-08,2025-08-10,2,4,0,2,175.82,1.15,synthetic_no_deal,no_deal,102,166.49,2_3,3_4,us,Generated from 2025 anchor near context median
+RB00456,fort lauderdale,florida,united states of america,US,2025-08-08,2025-08-10,2,4,0,2,206.4,1.35,synthetic_no_deal,no_deal,102,166.49,2_3,3_4,us,Generated from 2025 anchor near context median
+RB00457,friusa,la altagracia,d.r.,DO,2025-04-24,2025-04-27,3,4,0,1,292.24,0.55,synthetic_deal,deal,71,493.69,2_3,3_4,do,Generated from 2025 anchor near context median
+RB00458,friusa,la altagracia,d.r.,DO,2025-04-24,2025-04-27,3,4,0,1,371.94,0.7,synthetic_deal,deal,71,493.69,2_3,3_4,do,Generated from 2025 anchor near context median
+RB00459,friusa,la altagracia,d.r.,DO,2025-04-24,2025-04-27,3,4,0,1,451.65,0.85,synthetic_borderline,borderline,71,493.69,2_3,3_4,do,Generated from 2025 anchor near context median
+RB00460,friusa,la altagracia,d.r.,DO,2025-04-24,2025-04-27,3,4,0,1,531.35,1.0,synthetic_no_deal,no_deal,71,493.69,2_3,3_4,do,Generated from 2025 anchor near context median
+RB00461,friusa,la altagracia,d.r.,DO,2025-04-24,2025-04-27,3,4,0,1,611.05,1.15,synthetic_no_deal,no_deal,71,493.69,2_3,3_4,do,Generated from 2025 anchor near context median
+RB00462,friusa,la altagracia,d.r.,DO,2025-04-24,2025-04-27,3,4,0,1,717.32,1.35,synthetic_no_deal,no_deal,71,493.69,2_3,3_4,do,Generated from 2025 anchor near context median
+RB00463,paris,ile-de-france,france,FR,2025-05-21,2025-05-25,4,3,0,1,213.3,0.55,synthetic_deal,deal,103,386.65,4_6,3_4,other,Generated from 2025 anchor near context median
+RB00464,paris,ile-de-france,france,FR,2025-05-21,2025-05-25,4,3,0,1,271.47,0.7,synthetic_deal,deal,103,386.65,4_6,3_4,other,Generated from 2025 anchor near context median
+RB00465,paris,ile-de-france,france,FR,2025-05-21,2025-05-25,4,3,0,1,329.65,0.85,synthetic_borderline,borderline,103,386.65,4_6,3_4,other,Generated from 2025 anchor near context median
+RB00466,paris,ile-de-france,france,FR,2025-05-21,2025-05-25,4,3,0,1,387.82,1.0,synthetic_no_deal,no_deal,103,386.65,4_6,3_4,other,Generated from 2025 anchor near context median
+RB00467,paris,ile-de-france,france,FR,2025-05-21,2025-05-25,4,3,0,1,445.99,1.15,synthetic_no_deal,no_deal,103,386.65,4_6,3_4,other,Generated from 2025 anchor near context median
+RB00468,paris,ile-de-france,france,FR,2025-05-21,2025-05-25,4,3,0,1,523.56,1.35,synthetic_no_deal,no_deal,103,386.65,4_6,3_4,other,Generated from 2025 anchor near context median
+RB00469,nassau,,the bahamas,BS,2025-02-14,2025-02-16,2,2,3,1,305.4,0.55,synthetic_deal,deal,46,522.97,2_3,5_plus,other,Generated from 2025 anchor near context median
+RB00470,nassau,,the bahamas,BS,2025-02-14,2025-02-16,2,2,3,1,388.69,0.7,synthetic_deal,deal,46,522.97,2_3,5_plus,other,Generated from 2025 anchor near context median
+RB00471,nassau,,the bahamas,BS,2025-02-14,2025-02-16,2,2,3,1,471.98,0.85,synthetic_borderline,borderline,46,522.97,2_3,5_plus,other,Generated from 2025 anchor near context median
+RB00472,nassau,,the bahamas,BS,2025-02-14,2025-02-16,2,2,3,1,555.27,1.0,synthetic_no_deal,no_deal,46,522.97,2_3,5_plus,other,Generated from 2025 anchor near context median
+RB00473,nassau,,the bahamas,BS,2025-02-14,2025-02-16,2,2,3,1,638.56,1.15,synthetic_no_deal,no_deal,46,522.97,2_3,5_plus,other,Generated from 2025 anchor near context median
+RB00474,nassau,,the bahamas,BS,2025-02-14,2025-02-16,2,2,3,1,749.61,1.35,synthetic_no_deal,no_deal,46,522.97,2_3,5_plus,other,Generated from 2025 anchor near context median
+RB00475,saint michael,,barbados,BB,2025-08-30,2025-09-02,3,2,0,1,113.7,0.55,synthetic_deal,deal,59,197.4733,2_3,2,other,Generated from 2025 anchor near context median
+RB00476,saint michael,,barbados,BB,2025-08-30,2025-09-02,3,2,0,1,144.71,0.7,synthetic_deal,deal,59,197.4733,2_3,2,other,Generated from 2025 anchor near context median
+RB00477,saint michael,,barbados,BB,2025-08-30,2025-09-02,3,2,0,1,175.72,0.85,synthetic_borderline,borderline,59,197.4733,2_3,2,other,Generated from 2025 anchor near context median
+RB00478,saint michael,,barbados,BB,2025-08-30,2025-09-02,3,2,0,1,206.73,1.0,synthetic_no_deal,no_deal,59,197.4733,2_3,2,other,Generated from 2025 anchor near context median
+RB00479,saint michael,,barbados,BB,2025-08-30,2025-09-02,3,2,0,1,237.74,1.15,synthetic_no_deal,no_deal,59,197.4733,2_3,2,other,Generated from 2025 anchor near context median
+RB00480,saint michael,,barbados,BB,2025-08-30,2025-09-02,3,2,0,1,279.09,1.35,synthetic_no_deal,no_deal,59,197.4733,2_3,2,other,Generated from 2025 anchor near context median
+RB00481,paris,ile-de-france,france,FR,2025-09-23,2025-09-24,1,2,0,1,180.33,0.55,synthetic_deal,deal,32,298.2864,1,2,other,Generated from 2025 anchor near context median
+RB00482,paris,ile-de-france,france,FR,2025-09-23,2025-09-24,1,2,0,1,229.52,0.7,synthetic_deal,deal,32,298.2864,1,2,other,Generated from 2025 anchor near context median
+RB00483,paris,ile-de-france,france,FR,2025-09-23,2025-09-24,1,2,0,1,278.7,0.85,synthetic_borderline,borderline,32,298.2864,1,2,other,Generated from 2025 anchor near context median
+RB00484,paris,ile-de-france,france,FR,2025-09-23,2025-09-24,1,2,0,1,327.88,1.0,synthetic_no_deal,no_deal,32,298.2864,1,2,other,Generated from 2025 anchor near context median
+RB00485,paris,ile-de-france,france,FR,2025-09-23,2025-09-24,1,2,0,1,377.06,1.15,synthetic_no_deal,no_deal,32,298.2864,1,2,other,Generated from 2025 anchor near context median
+RB00486,paris,ile-de-france,france,FR,2025-09-23,2025-09-24,1,2,0,1,442.64,1.35,synthetic_no_deal,no_deal,32,298.2864,1,2,other,Generated from 2025 anchor near context median
+RB00487,kihei,hawaii,united states of america,US,2025-09-16,2025-09-18,2,2,0,1,236.19,0.55,synthetic_deal,deal,59,390.99,2_3,2,us,Generated from 2025 anchor near context median
+RB00488,kihei,hawaii,united states of america,US,2025-09-16,2025-09-18,2,2,0,1,300.6,0.7,synthetic_deal,deal,59,390.99,2_3,2,us,Generated from 2025 anchor near context median
+RB00489,kihei,hawaii,united states of america,US,2025-09-16,2025-09-18,2,2,0,1,365.02,0.85,synthetic_borderline,borderline,59,390.99,2_3,2,us,Generated from 2025 anchor near context median
+RB00490,kihei,hawaii,united states of america,US,2025-09-16,2025-09-18,2,2,0,1,429.44,1.0,synthetic_no_deal,no_deal,59,390.99,2_3,2,us,Generated from 2025 anchor near context median
+RB00491,kihei,hawaii,united states of america,US,2025-09-16,2025-09-18,2,2,0,1,493.85,1.15,synthetic_no_deal,no_deal,59,390.99,2_3,2,us,Generated from 2025 anchor near context median
+RB00492,kihei,hawaii,united states of america,US,2025-09-16,2025-09-18,2,2,0,1,579.74,1.35,synthetic_no_deal,no_deal,59,390.99,2_3,2,us,Generated from 2025 anchor near context median
+RB00493,san francisco,california,united states of america,US,2025-02-07,2025-02-11,4,2,0,1,71.28,0.55,synthetic_deal,deal,46,140.795,4_6,2,us,Generated from 2025 anchor near context median
+RB00494,san francisco,california,united states of america,US,2025-02-07,2025-02-11,4,2,0,1,90.71,0.7,synthetic_deal,deal,46,140.795,4_6,2,us,Generated from 2025 anchor near context median
+RB00495,san francisco,california,united states of america,US,2025-02-07,2025-02-11,4,2,0,1,110.15,0.85,synthetic_borderline,borderline,46,140.795,4_6,2,us,Generated from 2025 anchor near context median
+RB00496,san francisco,california,united states of america,US,2025-02-07,2025-02-11,4,2,0,1,129.59,1.0,synthetic_no_deal,no_deal,46,140.795,4_6,2,us,Generated from 2025 anchor near context median
+RB00497,san francisco,california,united states of america,US,2025-02-07,2025-02-11,4,2,0,1,149.03,1.15,synthetic_no_deal,no_deal,46,140.795,4_6,2,us,Generated from 2025 anchor near context median
+RB00498,san francisco,california,united states of america,US,2025-02-07,2025-02-11,4,2,0,1,174.95,1.35,synthetic_no_deal,no_deal,46,140.795,4_6,2,us,Generated from 2025 anchor near context median
+RB00499,chicago,illinois,united states of america,US,2025-06-11,2025-06-14,3,2,0,1,97.09,0.55,synthetic_deal,deal,149,189.4384,2_3,2,us,Generated from 2025 anchor near context median
+RB00500,chicago,illinois,united states of america,US,2025-06-11,2025-06-14,3,2,0,1,123.57,0.7,synthetic_deal,deal,149,189.4384,2_3,2,us,Generated from 2025 anchor near context median
+RB00501,chicago,illinois,united states of america,US,2025-06-11,2025-06-14,3,2,0,1,150.05,0.85,synthetic_borderline,borderline,149,189.4384,2_3,2,us,Generated from 2025 anchor near context median
+RB00502,chicago,illinois,united states of america,US,2025-06-11,2025-06-14,3,2,0,1,176.53,1.0,synthetic_no_deal,no_deal,149,189.4384,2_3,2,us,Generated from 2025 anchor near context median
+RB00503,chicago,illinois,united states of america,US,2025-06-11,2025-06-14,3,2,0,1,203.01,1.15,synthetic_no_deal,no_deal,149,189.4384,2_3,2,us,Generated from 2025 anchor near context median
+RB00504,chicago,illinois,united states of america,US,2025-06-11,2025-06-14,3,2,0,1,238.32,1.35,synthetic_no_deal,no_deal,149,189.4384,2_3,2,us,Generated from 2025 anchor near context median
+RB00505,anaheim,california,united states of america,US,2025-04-05,2025-04-09,4,2,1,1,88.26,0.55,synthetic_deal,deal,78,172.1527,4_6,3_4,us,Generated from 2025 anchor near context median
+RB00506,anaheim,california,united states of america,US,2025-04-05,2025-04-09,4,2,1,1,112.33,0.7,synthetic_deal,deal,78,172.1527,4_6,3_4,us,Generated from 2025 anchor near context median
+RB00507,anaheim,california,united states of america,US,2025-04-05,2025-04-09,4,2,1,1,136.4,0.85,synthetic_borderline,borderline,78,172.1527,4_6,3_4,us,Generated from 2025 anchor near context median
+RB00508,anaheim,california,united states of america,US,2025-04-05,2025-04-09,4,2,1,1,160.47,1.0,synthetic_no_deal,no_deal,78,172.1527,4_6,3_4,us,Generated from 2025 anchor near context median
+RB00509,anaheim,california,united states of america,US,2025-04-05,2025-04-09,4,2,1,1,184.54,1.15,synthetic_no_deal,no_deal,78,172.1527,4_6,3_4,us,Generated from 2025 anchor near context median
+RB00510,anaheim,california,united states of america,US,2025-04-05,2025-04-09,4,2,1,1,216.63,1.35,synthetic_no_deal,no_deal,78,172.1527,4_6,3_4,us,Generated from 2025 anchor near context median
+RB00511,benito juárez,quintana roo,mexico,MX,2025-05-04,2025-05-11,7,4,0,2,201.44,0.55,synthetic_deal,deal,105,340.8792,7_plus,3_4,mx,Generated from 2025 anchor near context median
+RB00512,benito juárez,quintana roo,mexico,MX,2025-05-04,2025-05-11,7,4,0,2,256.38,0.7,synthetic_deal,deal,105,340.8792,7_plus,3_4,mx,Generated from 2025 anchor near context median
+RB00513,benito juárez,quintana roo,mexico,MX,2025-05-04,2025-05-11,7,4,0,2,311.32,0.85,synthetic_borderline,borderline,105,340.8792,7_plus,3_4,mx,Generated from 2025 anchor near context median
+RB00514,benito juárez,quintana roo,mexico,MX,2025-05-04,2025-05-11,7,4,0,2,366.26,1.0,synthetic_no_deal,no_deal,105,340.8792,7_plus,3_4,mx,Generated from 2025 anchor near context median
+RB00515,benito juárez,quintana roo,mexico,MX,2025-05-04,2025-05-11,7,4,0,2,421.2,1.15,synthetic_no_deal,no_deal,105,340.8792,7_plus,3_4,mx,Generated from 2025 anchor near context median
+RB00516,benito juárez,quintana roo,mexico,MX,2025-05-04,2025-05-11,7,4,0,2,494.45,1.35,synthetic_no_deal,no_deal,105,340.8792,7_plus,3_4,mx,Generated from 2025 anchor near context median
+RB00517,provinciales and west caicos,,turks and caicos islands,TC,2025-03-01,2025-03-06,5,3,0,1,692.63,0.55,synthetic_deal,deal,66,1373.37,4_6,3_4,other,Generated from 2025 anchor near context median
+RB00518,provinciales and west caicos,,turks and caicos islands,TC,2025-03-01,2025-03-06,5,3,0,1,881.52,0.7,synthetic_deal,deal,66,1373.37,4_6,3_4,other,Generated from 2025 anchor near context median
+RB00519,provinciales and west caicos,,turks and caicos islands,TC,2025-03-01,2025-03-06,5,3,0,1,1070.42,0.85,synthetic_borderline,borderline,66,1373.37,4_6,3_4,other,Generated from 2025 anchor near context median
+RB00520,provinciales and west caicos,,turks and caicos islands,TC,2025-03-01,2025-03-06,5,3,0,1,1259.32,1.0,synthetic_no_deal,no_deal,66,1373.37,4_6,3_4,other,Generated from 2025 anchor near context median
+RB00521,provinciales and west caicos,,turks and caicos islands,TC,2025-03-01,2025-03-06,5,3,0,1,1448.22,1.15,synthetic_no_deal,no_deal,66,1373.37,4_6,3_4,other,Generated from 2025 anchor near context median
+RB00522,provinciales and west caicos,,turks and caicos islands,TC,2025-03-01,2025-03-06,5,3,0,1,1700.08,1.35,synthetic_no_deal,no_deal,66,1373.37,4_6,3_4,other,Generated from 2025 anchor near context median
+RB00523,los angeles,california,united states of america,US,2025-02-22,2025-02-27,5,2,0,1,82.86,0.55,synthetic_deal,deal,101,161.2509,4_6,2,us,Generated from 2025 anchor near context median
+RB00524,los angeles,california,united states of america,US,2025-02-22,2025-02-27,5,2,0,1,105.46,0.7,synthetic_deal,deal,101,161.2509,4_6,2,us,Generated from 2025 anchor near context median
+RB00525,los angeles,california,united states of america,US,2025-02-22,2025-02-27,5,2,0,1,128.06,0.85,synthetic_borderline,borderline,101,161.2509,4_6,2,us,Generated from 2025 anchor near context median
+RB00526,los angeles,california,united states of america,US,2025-02-22,2025-02-27,5,2,0,1,150.66,1.0,synthetic_no_deal,no_deal,101,161.2509,4_6,2,us,Generated from 2025 anchor near context median
+RB00527,los angeles,california,united states of america,US,2025-02-22,2025-02-27,5,2,0,1,173.25,1.15,synthetic_no_deal,no_deal,101,161.2509,4_6,2,us,Generated from 2025 anchor near context median
+RB00528,los angeles,california,united states of america,US,2025-02-22,2025-02-27,5,2,0,1,203.39,1.35,synthetic_no_deal,no_deal,101,161.2509,4_6,2,us,Generated from 2025 anchor near context median
+RB00529,chattanooga,tennessee,usa,US,2025-04-30,2025-05-01,1,2,0,1,54.18,0.55,synthetic_deal,deal,39,100.1798,1,2,us,Generated from 2025 anchor near context median
+RB00530,chattanooga,tennessee,usa,US,2025-04-30,2025-05-01,1,2,0,1,68.95,0.7,synthetic_deal,deal,39,100.1798,1,2,us,Generated from 2025 anchor near context median
+RB00531,chattanooga,tennessee,usa,US,2025-04-30,2025-05-01,1,2,0,1,83.72,0.85,synthetic_borderline,borderline,39,100.1798,1,2,us,Generated from 2025 anchor near context median
+RB00532,chattanooga,tennessee,usa,US,2025-04-30,2025-05-01,1,2,0,1,98.5,1.0,synthetic_no_deal,no_deal,39,100.1798,1,2,us,Generated from 2025 anchor near context median
+RB00533,chattanooga,tennessee,usa,US,2025-04-30,2025-05-01,1,2,0,1,113.27,1.15,synthetic_no_deal,no_deal,39,100.1798,1,2,us,Generated from 2025 anchor near context median
+RB00534,chattanooga,tennessee,usa,US,2025-04-30,2025-05-01,1,2,0,1,132.98,1.35,synthetic_no_deal,no_deal,39,100.1798,1,2,us,Generated from 2025 anchor near context median
+RB00535,mexico city,mexico city,mexico,MX,2025-02-03,2025-02-09,6,2,0,1,54.65,0.55,synthetic_deal,deal,74,99.3525,4_6,2,mx,Generated from 2025 anchor near context median
+RB00536,mexico city,mexico city,mexico,MX,2025-02-03,2025-02-09,6,2,0,1,69.56,0.7,synthetic_deal,deal,74,99.3525,4_6,2,mx,Generated from 2025 anchor near context median
+RB00537,mexico city,mexico city,mexico,MX,2025-02-03,2025-02-09,6,2,0,1,84.46,0.85,synthetic_borderline,borderline,74,99.3525,4_6,2,mx,Generated from 2025 anchor near context median
+RB00538,mexico city,mexico city,mexico,MX,2025-02-03,2025-02-09,6,2,0,1,99.36,1.0,synthetic_no_deal,no_deal,74,99.3525,4_6,2,mx,Generated from 2025 anchor near context median
+RB00539,mexico city,mexico city,mexico,MX,2025-02-03,2025-02-09,6,2,0,1,114.27,1.15,synthetic_no_deal,no_deal,74,99.3525,4_6,2,mx,Generated from 2025 anchor near context median
+RB00540,mexico city,mexico city,mexico,MX,2025-02-03,2025-02-09,6,2,0,1,134.14,1.35,synthetic_no_deal,no_deal,74,99.3525,4_6,2,mx,Generated from 2025 anchor near context median
