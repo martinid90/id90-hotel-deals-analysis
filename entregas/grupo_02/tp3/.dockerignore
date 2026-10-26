@@ -1,0 +1,11 @@
+data/*.csv
+!data/destination_with_nearest.csv
+data/*.csv.gz
+data/test_set/
+outputs/
+notebooks/
+tests/
+*.ipynb
+__pycache__/
+**/__pycache__/
+.pytest_cache/

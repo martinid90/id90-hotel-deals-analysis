@@ -1,0 +1,9 @@
+# Pipeline, notebook y tests (la imagen Docker usa requirements-api.txt)
+-r requirements-api.txt
+scikit-learn>=1.4
+matplotlib>=3.8
+seaborn>=0.13
+jupyter>=1.0
+jupytext>=1.16
+pytest>=8.0
+httpx>=0.27

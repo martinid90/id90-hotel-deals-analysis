@@ -1,0 +1,5 @@
+data/datos_historicos_*.csv
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
+outputs/run_*.log

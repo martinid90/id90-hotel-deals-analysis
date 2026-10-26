@@ -1,0 +1,15 @@
+{
+  "data_source": "sample",
+  "train_year": 2024,
+  "test_year": 2025,
+  "winsor_quantile": 0.999,
+  "winsor_cap": 1106.970700000008,
+  "price_std_floor": 1.0,
+  "z_log_threshold": -1.0,
+  "min_discount": 0.2,
+  "min_support": 30,
+  "support_column": "n_records",
+  "train_prevalence": 0.1560721331728133,
+  "n_train": 166781,
+  "n_test": 132501
+}

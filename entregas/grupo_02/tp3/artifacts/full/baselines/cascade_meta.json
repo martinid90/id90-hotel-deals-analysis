@@ -1,0 +1,51 @@
+{
+  "min_support": 30,
+  "support_col": "n_records",
+  "levels": [
+    [
+      "L1_dest_mes_semana_estadia",
+      [
+        "destination_final",
+        "month",
+        "week_in_month",
+        "stay_duration"
+      ]
+    ],
+    [
+      "L2_dest_mes_estadia",
+      [
+        "destination_final",
+        "month",
+        "stay_duration"
+      ]
+    ],
+    [
+      "L3_dest_mes",
+      [
+        "destination_final",
+        "month"
+      ]
+    ],
+    [
+      "L4_dest_estadia",
+      [
+        "destination_final",
+        "stay_duration"
+      ]
+    ],
+    [
+      "L5_dest",
+      [
+        "destination_final"
+      ]
+    ],
+    [
+      "L6_pais_mes_estadia",
+      [
+        "country_code",
+        "month",
+        "stay_duration"
+      ]
+    ]
+  ]
+}
