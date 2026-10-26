@@ -1,0 +1,12 @@
+{
+  "city": "Orlando",
+  "state": "Florida",
+  "country": "United States of America",
+  "country_code": "us",
+  "date_start": "2025-07-10",
+  "date_end": "2025-07-13",
+  "adults": 2,
+  "kids": 0,
+  "rooms": 1,
+  "price": 95.0
+}

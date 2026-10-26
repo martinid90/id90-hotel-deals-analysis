@@ -1,0 +1,10 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+outputs/
+tests/
+data/interim/
+data/*_set.csv.gz

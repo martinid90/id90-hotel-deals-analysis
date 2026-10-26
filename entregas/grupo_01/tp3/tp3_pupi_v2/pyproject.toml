@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ofertas-hoteles"
+version = "2.0.0"
+description = "TP3 Grupo 1 (versión Pupi v2): detector de ofertas hoteleras, evaluación y API"
+requires-python = ">=3.10"
+authors = [{ name = "Lucila Pasquetta (Pupi)" }]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

@@ -1,0 +1,34 @@
+{
+  "1_aleatorio": {
+    "param": "p",
+    "valor": 0.1
+  },
+  "2_mediana_regla": {
+    "param": "c",
+    "valor": 0.4
+  },
+  "3_propuesto_robusto_A": {
+    "param": "z_cut",
+    "valor": -1.5
+  },
+  "3c_propuesto_v1_piso_abs": {
+    "param": "z_cut",
+    "valor": -1.5
+  },
+  "3b_propuesto_robusto_B": {
+    "param": "z_cut",
+    "valor": -1.5
+  },
+  "4_mad_puro": {
+    "param": "m_cut",
+    "valor": -1.5
+  },
+  "5_isolation_forest": {
+    "param": "q",
+    "valor": 0.2
+  },
+  "6_zscore_grupo": {
+    "param": "z_cut",
+    "valor": -1.0
+  }
+}

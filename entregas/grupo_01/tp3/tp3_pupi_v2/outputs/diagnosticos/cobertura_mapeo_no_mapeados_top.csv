@@ -1,0 +1,31 @@
+country_code,country,state,city,row_count,demand_weight
+us,United States of America,Florida,Miami Beach,19706,473159
+us,United States of America,Nevada,Winchester,16900,386531
+,,,,26649,373051
+us,United States of America,California,Lomita Park,11188,279213
+us,United States of America,Washington,SeaTac,8200,188259
+us,United States of America,Florida,Dr. Phillips,14201,180182
+us,United States of America,Puerto Rico,San Juan Antiguo,11875,168976
+us,United States of America,Illinois,Norridge,8453,159172
+nl,Netherlands,,,13494,113172
+us,United States of America,Hawaii,Kahaluu-Keauhou CDP,9335,96614
+us,United States of America,Hawaii,Maui County,12220,85105
+us,United States of America,Florida,Alsips Court Mobile Home Park,6853,79604
+jm,Jamaica,,Kew,8507,71703
+us,United States of America,Puerto Rico,Santurce,7550,58232
+jp,Japan,,Nerima,9421,50414
+us,United States of America,Maryland,Ehrmansville,4190,48665
+us,United States,Puerto Rico,Río Piedras,6774,48120
+tc,Turks and Caicos Islands,,Provinciales and West Caicos,8743,47883
+nl,The Netherlands,,Philipsburg,7303,47572
+nl,The Netherlands,Curacao,Willemstad,7124,45908
+ar,Argentina,Autonomous City of Buenos Aires,Autonomous City of Buenos Aires,5055,45164
+us,United States of America,Washington,Boulevard Park,4158,41372
+us,United States of America,Florida,Belle Isle,4738,38332
+us,United States of America,Texas,Hardy Heights,2731,37103
+ag,Antigua and Barbuda,,St. John's,5757,35895
+us,United States of America,Virginia,Oak Grove,3766,35333
+us,United States,Florida,Miami-Dade County,4760,33949
+bb,Barbados,,Saint Michael,6399,33923
+fr,France,French Polynesia,Faʻaʻā,6161,33753
+us,United States,Florida,Manatee County,4551,33154

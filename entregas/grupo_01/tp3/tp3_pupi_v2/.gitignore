@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+*.egg-info/
+
+# El .gitignore de la raíz ignora data/ y entregas/**/outputs/.
+# Acá los volvemos a incluir porque son livianos y forman parte de la entrega
+# (test set compartible, mapeo que usa la API, métricas y figuras).
+!/data/
+!/outputs/
+
+# muestras intermedias: se regeneran con el pipeline (pesan ~60 MB)
+/data/interim/

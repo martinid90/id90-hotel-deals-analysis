@@ -1,0 +1,42 @@
+{
+  "modelo": "3_propuesto_robusto_A",
+  "version": "tp3-v2",
+  "entrenado_con": "búsquedas con check-in 2024 (muestra 20%, semilla 42)",
+  "fecha_export": "2026-10-16T20:19:24+00:00",
+  "unidad_precio": "habitacion_noche",
+  "niveles": [
+    [
+      "destino_mes",
+      [
+        "destination_final",
+        "month"
+      ]
+    ],
+    [
+      "destino",
+      [
+        "destination_final"
+      ]
+    ],
+    [
+      "pais_mes",
+      [
+        "cc",
+        "month"
+      ]
+    ],
+    [
+      "pais",
+      [
+        "cc"
+      ]
+    ]
+  ],
+  "min_soporte": 30,
+  "z_cut": -1.5,
+  "desc_min": 0.2,
+  "factor_sospechoso": 0.2,
+  "k_mad": 1.4826,
+  "mad_min": 0.05,
+  "piso_abs": 44.23544999999999
+}

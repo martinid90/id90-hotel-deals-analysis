@@ -1,0 +1,7 @@
+[
+  {"city": "Orlando", "state": "Florida", "country_code": "us", "date_start": "2025-07-10", "nights": 3, "adults": 2, "price": 95.0},
+  {"city": "Cancún", "state": "Quintana Roo", "country_code": "mx", "date_start": "2025-12-20", "nights": 5, "adults": 2, "price": 80.0},
+  {"city": "Buenos Aires", "state": "Buenos Aires", "country_code": "ar", "date_start": "2025-03-05", "nights": 2, "adults": 1, "price": 40.0},
+  {"city": "Pueblo Inventado", "state": "Nowhere", "country_code": "us", "date_start": "2025-05-01", "nights": 1, "adults": 2, "price": 120.0},
+  {"city": "Atlantis", "country_code": "zz", "date_start": "2025-05-01", "nights": 1, "adults": 2, "price": 120.0}
+]
