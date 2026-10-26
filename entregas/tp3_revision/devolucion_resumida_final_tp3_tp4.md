@@ -33,7 +33,13 @@ Les compartimos una devolución breve y final del trabajo.
 ## 4) ¿Esto afecta TP4 (video)?
 - **No bloquea TP4.**
 - Pueden avanzar con el video final sin problema.
-- Sí corresponde mencionar esta limitación metodológica y el plan de corrección.
+- No hace falta entrar en detalle técnico en el video.
+- Si quieren, pueden mencionarlo brevemente como mejora futura.
+
+Para quien necesite más detalle técnico, se dejan anexos:
+- `devolucion_final_tp3_robusta.md`
+- `auditoria_codigo_tp3.md`
+- `reporte_critico_testeo_generalizacion.md`
 
 ## 5) Paso a paso para corregir Grupo 2 (y cerrar)
 1. Definir una única convención de precio (train + API + documentación).
@@ -42,6 +48,8 @@ Les compartimos una devolución breve y final del trabajo.
 4. Recalibrar umbrales.
 5. Re-ejecutar benchmark robusto.
 6. Enviar tabla antes/después de métricas.
+
+Este ajuste puede hacerse después de la entrega del video de TP4.
 
 ## 6) Métricas resumidas
 - **Grupo 1:** buen desempeño global, precisión alta, FPR muy bajo, con menor recall en extremos por política conservadora.
@@ -86,4 +94,6 @@ Con base en lineamientos de cátedra:
 - Jornadas de presentación: **04/12 y 05/12**.
 
 Cierre:
-Muy buen trabajo general de ambos equipos. Ya están en etapa de cierre y comunicación ejecutiva. El foco ahora es sintetizar bien, mostrar resultados con criterio y dejar claros límites y mejoras.
+Muy buen trabajo general de ambos equipos. Son detalles puntuales de mejora: en líneas generales está bien.
+Continúen con el video final, enfocando objetivo, resultados y conclusiones.
+Si tienen dudas, avísenme.
